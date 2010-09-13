@@ -2,12 +2,72 @@
    "api_base_url" : "http://api.twitter.com/1",
    "version" : "0.1",
    "methods" : {
+      "retweets_of_me" : {
+         "params" : [
+            "since_id",
+            "max_id",
+            "count",
+            "page",
+            "trim_user",
+            "include_entities"
+         ],
+         "path" : "/statuses/retweets_of_me.:format",
+         "method" : "GET",
+         "authentication" : "1"
+      },
+      "friends_timeline" : {
+         "params" : [
+            "since_id",
+            "max_id",
+            "count",
+            "page",
+            "trim_user",
+            "include_rts",
+            "include_entities"
+         ],
+         "path" : "/statuses/friends_timeline.:format",
+         "method" : "GET",
+         "authentication" : "1"
+      },
+      "user_timeline" : {
+         "params" : [
+            "user_id",
+            "screen_name",
+            "since_id",
+            "max_id",
+            "count",
+            "page",
+            "trim_user",
+            "include_rts",
+            "include_entities"
+         ],
+         "path" : "/statuses/user_timeline.:format",
+         "method" : "GET"
+      },
       "public_timeline" : {
          "params" : [
-            "skip_user"
+            "trim_user",
+            "include_entities"
          ],
-         "path" : "/statuses/public_timeline",
+         "required" : [
+            "format"
+         ],
+         "path" : "/statuses/public_timeline.:format",
          "method" : "GET"
+      },
+      "mentions" : {
+         "params" : [
+            "since_id",
+            "max_id",
+            "count",
+            "page",
+            "trim_user",
+            "include_rts",
+            "include_entities"
+         ],
+         "path" : "/statuses/mentions.:format",
+         "method" : "GET",
+         "authentication" : "1"
       },
       "home_timeline" : {
          "params" : [
@@ -15,14 +75,48 @@
             "max_id",
             "count",
             "page",
-            "skip_user"
+            "trim_user",
+            "include_entities"
          ],
-         "path" : "/statuses/home_timeline",
-         "method" : "GET"
+         "required" : [
+            "format"
+         ],
+         "path" : "/statuses/home_timeline.:format",
+         "method" : "GET",
+         "authentication" : "1"
+      },
+      "retweeted_by_me" : {
+         "params" : [
+            "since_id",
+            "max_id",
+            "count",
+            "page",
+            "trim_user",
+            "include_entities"
+         ],
+         "path" : "/statuses/retweeted_by_me.:format",
+         "method" : "GET",
+         "authentication" : "1"
+      },
+      "retweeted_to_me" : {
+         "params" : [
+            "since_id",
+            "max_id",
+            "count",
+            "page",
+            "trim_user",
+            "include_entities"
+         ],
+         "path" : "/statuses/retweeted_to_me.:format",
+         "method" : "GET",
+         "authentication" : "1"
       }
    },
    "api_format" : [
-      "json"
+      "json",
+      "rss",
+      "xml",
+      "atom"
    ],
    "name" : "Twitter",
    "author" : [
