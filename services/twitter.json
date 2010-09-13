@@ -1,9 +1,6 @@
 {
-   "declare" : {
-      "api_base_url" : "http://api.twitter.com/1",
-      "api_format_mode" : "append",
-      "api_format" : "json"
-   },
+   "api_base_url" : "http://api.twitter.com/1",
+   "version" : "0.1",
    "methods" : {
       "public_timeline" : {
          "params" : [
@@ -23,5 +20,15 @@
          "path" : "/statuses/home_timeline",
          "method" : "GET"
       }
+   },
+   "api_format" : [
+      "json"
+   ],
+   "name" : "Twitter",
+   "author" : [
+      "franck cuny <franck@lumberjaph.net>"
+   ],
+   "meta" : {
+      "documentation" : "http://dev.twitter.com/"
    }
 }

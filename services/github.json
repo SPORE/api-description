@@ -1,15 +1,8 @@
 {
-   "declare" : {
-      "api_base_url" : "http://github.com/api/v2/",
-      "api_format_mode" : "content-type",
-      "api_format" : "json"
-   },
+   "api_base_url" : "http://github.com/api/v2/",
+   "version" : "0.1",
    "methods" : {
       "user_information" : {
-         "params" : [
-            "username",
-            "format"
-         ],
          "required" : [
             "username",
             "format"
@@ -18,10 +11,6 @@
          "method" : "GET"
       },
       "user_following" : {
-         "params" : [
-            "user",
-            "format"
-         ],
          "required" : [
             "user",
             "format"
@@ -29,5 +18,12 @@
          "path" : "/:format/user/show/:user/followers",
          "method" : "GET"
       }
+   },
+   "name" : "GitHub",
+   "author" : [
+      "franck cuny <franck@lumberjaph.net>"
+   ],
+   "meta" : {
+      "documentation" : "http://develop.github.com/"
    }
 }
