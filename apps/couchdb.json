@@ -73,5 +73,8 @@
    "name" : "CouchDB",
    "author" : [
       "franck cuny <franck@lumberjaph.net>"
-   ]
+   ],
+   "meta" : {
+      "documentation" : "http://wiki.apache.org/couchdb/HTTP_Document_API"
+   }
 }
