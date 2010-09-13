@@ -1,0 +1,77 @@
+{
+   "version" : "0.1",
+   "methods" : {
+      "create_document_without_id" : {
+         "required" : [
+            "database"
+         ],
+         "path" : "/:database",
+         "method" : "POST"
+      },
+      "get_all_documents" : {
+         "params" : [
+            "descending",
+            "startkey",
+            "endkey",
+            "limit",
+            "include_docs"
+         ],
+         "required" : [
+            "database"
+         ],
+         "path" : "/:database/_all_docs",
+         "method" : "GET"
+      },
+      "create_document_with_id" : {
+         "required" : [
+            "database",
+            "doc_id"
+         ],
+         "path" : "/:database/:doc_id",
+         "method" : "POST"
+      },
+      "get_document" : {
+         "params" : [
+            "rev",
+            "revs"
+         ],
+         "required" : [
+            "database",
+            "doc_id"
+         ],
+         "path" : "/:database/:doc_id",
+         "method" : "GET"
+      },
+      "get_all_documents_by_seq" : {
+         "params" : [
+            "startkey",
+            "endkey",
+            "limit",
+            "include_docs"
+         ],
+         "required" : [
+            "database"
+         ],
+         "path" : "/:database/_all_docs_by_seq",
+         "method" : "GET"
+      },
+      "delete_document" : {
+         "params" : [
+            "rev"
+         ],
+         "required" : [
+            "database",
+            "doc_id"
+         ],
+         "path" : "/:database/:doc_id",
+         "method" : "DELETE"
+      }
+   },
+   "api_format" : [
+      "json"
+   ],
+   "name" : "CouchDB",
+   "author" : [
+      "franck cuny <franck@lumberjaph.net>"
+   ]
+}

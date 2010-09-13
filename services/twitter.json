@@ -1,0 +1,27 @@
+{
+   "declare" : {
+      "api_base_url" : "http://api.twitter.com/1",
+      "api_format_mode" : "append",
+      "api_format" : "json"
+   },
+   "methods" : {
+      "public_timeline" : {
+         "params" : [
+            "skip_user"
+         ],
+         "path" : "/statuses/public_timeline",
+         "method" : "GET"
+      },
+      "home_timeline" : {
+         "params" : [
+            "since_id",
+            "max_id",
+            "count",
+            "page",
+            "skip_user"
+         ],
+         "path" : "/statuses/home_timeline",
+         "method" : "GET"
+      }
+   }
+}
