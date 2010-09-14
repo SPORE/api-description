@@ -1,0 +1,54 @@
+{
+   "api_base_url" : "http://api.backtype.com",
+   "version" : "0.1",
+   "methods" : {
+      "tweets_by_url" : {
+         "params" : [
+            "itemsperpage",
+            "start",
+            "end"
+         ],
+         "required" : [
+            "q",
+            "key"
+         ],
+         "expected" : [
+            "200"
+         ],
+         "path" : "/tweets/search/links",
+         "method" : "GET"
+      },
+      "stats_by_url" : {
+         "params" : [
+            "batch"
+         ],
+         "required" : [
+            "q",
+            "key"
+         ],
+         "expected" : [
+            "200"
+         ],
+         "path" : "/tweetcount",
+         "method" : "GET"
+      },
+      "good_tweets_by_url" : {
+         "required" : [
+            "q",
+            "key"
+         ],
+         "expected" : [
+            "200"
+         ],
+         "path" : "/goodtweets",
+         "method" : "GET"
+      }
+   },
+   "name" : "Backtweet",
+   "author" : [
+      "franck cuny <franck@lumberjaph.net>"
+   ],
+   "meta" : {
+      "documentation" : "http://www.backtype.com/developers"
+   }
+}

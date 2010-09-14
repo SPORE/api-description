@@ -1,0 +1,93 @@
+{
+   "api_base_url" : "http://api.backtype.com/",
+   "version" : "0.1",
+   "methods" : {
+      "comments_connect" : {
+         "params" : [
+            "sources",
+            "sort",
+            "key"
+         ],
+         "required" : [
+            "format",
+            "url"
+         ],
+         "expected" : [
+            "200"
+         ],
+         "path" : "/comments/connect.:format",
+         "method" : "GET"
+      },
+      "comments_stats_by_page" : {
+         "required" : [
+            "url",
+            "format",
+            "key"
+         ],
+         "expected" : [
+            "200"
+         ],
+         "path" : "/post/stats.:format",
+         "method" : "GET"
+      },
+      "comments_connect_stats" : {
+         "required" : [
+            "format",
+            "url",
+            "key"
+         ],
+         "expected" : [
+            "200"
+         ],
+         "path" : "/comments/connect/stats.:format",
+         "method" : "GET"
+      },
+      "comments_search" : {
+         "params" : [
+            "start",
+            "end"
+         ],
+         "required" : [
+            "format",
+            "q",
+            "key"
+         ],
+         "expected" : [
+            "200"
+         ],
+         "path" : "/comments/search.:format",
+         "method" : "GET"
+      },
+      "comments_by_author_from_url" : {
+         "required" : [
+            "format",
+            "key",
+            "url"
+         ],
+         "expected" : [
+            "200"
+         ],
+         "path" : "/url/:url/comments.:format",
+         "method" : "GET"
+      },
+      "comments_by_page" : {
+         "required" : [
+            "url",
+            "format",
+            "key"
+         ],
+         "expected" : [
+            "200"
+         ],
+         "path" : "/post/comments.:format",
+         "method" : "GET"
+      }
+   },
+   "name" : "Backtype",
+   "author" : [
+      "franck cuny <franc@lumberjaph.net>"
+   ],
+   "meta" : {
+      "documentation" : "http://www.backtype.com/developers"
+   }
+}
