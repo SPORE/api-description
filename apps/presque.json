@@ -1,0 +1,130 @@
+{
+   "format" : [
+      "json"
+   ],
+   "version" : "0.1",
+   "methods" : {
+      "fetch_job" : {
+         "required" : [
+            "queue_name"
+         ],
+         "expected" : [
+            "200"
+         ],
+         "path" : "/q/:queue_name",
+         "method" : "GET"
+      },
+      "queue_size" : {
+         "required" : [
+            "queue_name"
+         ],
+         "path" : "/status/:queue_name",
+         "method" : "GET"
+      },
+      "reset_queue" : {
+         "required" : [
+            "queue_name"
+         ],
+         "path" : "/q/:queue_name",
+         "method" : "DELETE"
+      },
+      "worker_stats" : {
+         "params" : [
+            "worker_id"
+         ],
+         "path" : "/w/",
+         "method" : "GET"
+      },
+      "unregister_worker" : {
+         "required" : [
+            "queue_name"
+         ],
+         "path" : "/w/:queue_name",
+         "method" : "DELETE"
+      },
+      "create_job" : {
+         "params" : [
+            "delayed",
+            "uniq"
+         ],
+         "required" : [
+            "queue_name"
+         ],
+         "path" : "/q/:queue_name",
+         "method" : "POST"
+      },
+      "workers_stats" : {
+         "path" : "/w/",
+         "method" : "GET"
+      },
+      "failed_job" : {
+         "required" : [
+            "queue_name"
+         ],
+         "path" : "/q/:queue_name",
+         "method" : "PUT"
+      },
+      "register_worker" : {
+         "required" : [
+            "queue_name"
+         ],
+         "path" : "/w/:queue_name",
+         "method" : "POST"
+      },
+      "queue_stats" : {
+         "required" : [
+            "queue_name"
+         ],
+         "path" : "/w/",
+         "method" : "GET"
+      },
+      "change_queue_status" : {
+         "required" : [
+            "queue_name"
+         ],
+         "path" : "/control/:queue_name",
+         "method" : "POST"
+      },
+      "fetch_jobs" : {
+         "params" : [
+            "batch_size"
+         ],
+         "required" : [
+            "queue_name"
+         ],
+         "expected" : [
+            "200"
+         ],
+         "path" : "/q/:queue_name",
+         "method" : "GET"
+      },
+      "queue_info" : {
+         "required" : [
+            "queue_name"
+         ],
+         "path" : "/j/:queue_name",
+         "method" : "GET"
+      },
+      "create_jobs" : {
+         "params" : [
+            "delayed"
+         ],
+         "required" : [
+            "queue_name"
+         ],
+         "path" : "/q/:queue_name",
+         "method" : "POST"
+      },
+      "queue_status" : {
+         "required" : [
+            "queue_name"
+         ],
+         "path" : "/control/:queue_name",
+         "method" : "GET"
+      }
+   },
+   "name" : "Presque",
+   "author" : [
+      "franck cuny <franck@lumberjaph.net>"
+   ]
+}
