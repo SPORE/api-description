@@ -84,5 +84,8 @@
    "name" : "ihackernews",
    "author" : [
       "franck cuny <franck@lumberjaph.net>"
-   ]
+   ],
+   "meta" : {
+      "documentation" : "http://api.ihackernews.com/"
+   }
 }
