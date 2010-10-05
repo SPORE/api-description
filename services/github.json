@@ -93,8 +93,7 @@
       "list_all_repos" : {
          "required" : [
             "format",
-            "user",
-            "repo"
+            "user"
          ],
          "path" : "/:format/repos/show/:user",
          "method" : "GET"
