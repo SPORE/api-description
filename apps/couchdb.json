@@ -1,68 +1,80 @@
 {
-   "version" : "0.1",
+   "version" : "0.2",
    "methods" : {
       "create_document_without_id" : {
-         "required" : [
-            "database"
-         ],
+         "params" : {
+            "required" : [
+               "database"
+            ]
+         },
          "path" : "/:database",
          "method" : "POST"
       },
       "get_all_documents" : {
-         "params" : [
-            "descending",
-            "startkey",
-            "endkey",
-            "limit",
-            "include_docs"
-         ],
-         "required" : [
-            "database"
-         ],
+         "params" : {
+            "required" : [
+               "database"
+            ],
+            "optional" : [
+               "descending",
+               "startkey",
+               "endkey",
+               "limit",
+               "include_docs"
+            ]
+         },
          "path" : "/:database/_all_docs",
          "method" : "GET"
       },
       "create_document_with_id" : {
-         "required" : [
-            "database",
-            "doc_id"
-         ],
+         "params" : {
+            "required" : [
+               "database",
+               "doc_id"
+            ]
+         },
          "path" : "/:database/:doc_id",
          "method" : "POST"
       },
       "get_document" : {
-         "params" : [
-            "rev",
-            "revs"
-         ],
-         "required" : [
-            "database",
-            "doc_id"
-         ],
+         "params" : {
+            "required" : [
+               "database",
+               "doc_id"
+            ],
+            "optional" : [
+               "rev",
+               "revs"
+            ]
+         },
          "path" : "/:database/:doc_id",
          "method" : "GET"
       },
       "get_all_documents_by_seq" : {
-         "params" : [
-            "startkey",
-            "endkey",
-            "limit",
-            "include_docs"
-         ],
-         "required" : [
-            "database"
-         ],
+         "params" : {
+            "required" : [
+               "database"
+            ],
+            "optional" : [
+               "startkey",
+               "endkey",
+               "limit",
+               "include_docs"
+            ]
+         },
          "path" : "/:database/_all_docs_by_seq",
          "method" : "GET"
       },
       "delete_document" : {
-         "params" : [
-            "rev"
-         ],
-         "required" : [
-            "database",
-            "doc_id"
-         ],
+         "params" : {
+            "required" : [
+               "database",
+               "doc_id"
+            ],
+            "optional" : [
+               "rev"
+            ]
+         },
          "path" : "/:database/:doc_id",
          "method" : "DELETE"
       }

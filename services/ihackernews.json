@@ -1,11 +1,13 @@
 {
    "api_base_url" : "api.ihackernews.com",
-   "version" : "0.01",
+   "version" : "0.02",
    "methods" : {
       "askhn_posts" : {
-         "params" : [
-            "nextid"
-         ],
+         "params" : {
+            "optional" : [
+               "nextid"
+            ]
+         },
          "expected" : [
             "200"
          ],
@@ -21,9 +23,11 @@
          "method" : "POST"
       },
       "new_posts" : {
-         "params" : [
-            "nextid"
-         ],
+         "params" : {
+            "optional" : [
+               "nextid"
+            ]
+         },
          "expected" : [
             "200"
          ],
@@ -35,9 +39,11 @@
          "method" : "POST"
       },
       "user_profile" : {
-         "required" : [
-            "userid"
-         ],
+         "params" : {
+            "required" : [
+               "userid"
+            ]
+         },
          "expected" : [
             "200"
          ],
@@ -45,9 +51,11 @@
          "method" : "GET"
       },
       "retrieve_page" : {
-         "params" : [
-            "nextid"
-         ],
+         "params" : {
+            "optinal" : [
+               "nextid"
+            ]
+         },
          "expected" : [
             "200"
          ],
@@ -55,12 +63,14 @@
          "method" : "GET"
       },
       "posts_from_user" : {
-         "params" : [
-            "nextid"
-         ],
-         "required" : [
-            "username"
-         ],
+         "params" : {
+            "required" : [
+               "username"
+            ],
+            "optional" : [
+               "nextid"
+            ]
+         },
          "expected" : [
             "200"
          ],
@@ -68,9 +78,11 @@
          "method" : "GET"
       },
       "comments_for_post" : {
-         "required" : [
-            "id"
-         ],
+         "params" : {
+            "required" : [
+               "id"
+            ]
+         },
          "expected" : [
             "200"
          ],

@@ -1,179 +1,220 @@
 {
    "api_base_url" : "http://github.com/api/v2/",
-   "version" : "0.1",
+   "version" : "0.2",
    "methods" : {
       "follow" : {
-         "required" : [
-            "user",
-            "format"
-         ],
+         "params" : {
+            "required" : [
+               "user",
+               "format"
+            ]
+         },
          "path" : "/:format/user/follow/:user",
          "method" : "POST",
-         "authentication" : "1"
+         "authentication" : true
       },
       "user_search" : {
-         "required" : [
-            "format",
-            "search"
-         ],
+         "params" : {
+            "required" : [
+               "format",
+               "search"
+            ]
+         },
          "path" : "/:format/user/search/:search",
          "method" : "GET"
       },
       "unfollow" : {
-         "required" : [
-            "user",
-            "format"
-         ],
+         "params" : {
+            "required" : [
+               "user",
+               "format"
+            ]
+         },
          "path" : "/:format/user/unfollow/:user",
          "method" : "POST",
-         "authentication" : "1"
+         "authentication" : true
       },
       "unwatch_repo" : {
-         "required" : [
-            "format",
-            "user",
-            "repo"
-         ],
+         "params" : {
+            "required" : [
+               "format",
+               "user",
+               "repo"
+            ]
+         },
          "path" : "/:format/repos/unwatch/:user/:repo",
          "method" : "GET",
-         "authentication" : "1"
+         "authentication" : true
       },
       "user_information" : {
-         "required" : [
-            "username",
-            "format"
-         ],
+         "params" : {
+            "required" : [
+               "username",
+               "format"
+            ]
+         },
          "path" : "/:format/user/show/:username",
          "method" : "GET"
       },
       "list_public_keys" : {
-         "required" : [
-            "format"
-         ],
+         "params" : {
+            "required" : [
+               "format"
+            ]
+         },
          "path" : "/:format/user/keys",
          "method" : "GET",
-         "authentication" : "1"
+         "authentication" : true
       },
       "repos_info" : {
-         "required" : [
-            "format",
-            "user",
-            "repo"
-         ],
+         "params" : {
+            "required" : [
+               "format",
+               "user",
+               "repo"
+            ]
+         },
          "path" : "/:format/repos/:user/:repo",
          "method" : "GET"
       },
       "add_public_key" : {
-         "required" : [
-            "format"
-         ],
+         "params" : {
+            "required" : [
+               "format"
+            ]
+         },
          "path" : "/:format/user/key/add",
          "method" : "POST",
-         "authentication" : "1"
+         "authentication" : true
       },
       "fork_repos" : {
-         "required" : [
-            "format",
-            "user",
-            "repo"
-         ],
+         "params" : {
+            "required" : [
+               "format",
+               "user",
+               "repo"
+            ]
+         },
          "path" : "/:format/repos/fork/:user/:repo",
          "method" : "GET",
-         "authentication" : "1"
+         "authentication" : true
       },
       "my_information" : {
-         "required" : [
-            "username",
-            "format"
-         ],
+         "params" : {
+            "required" : [
+               "username",
+               "format"
+            ]
+         },
          "path" : "/:format/user/show/:username",
          "method" : "GET",
-         "authentication" : "1"
+         "authentication" : true
       },
       "list_all_repos" : {
-         "required" : [
-            "format",
-            "user"
-         ],
+         "params" : {
+            "required" : [
+               "format",
+               "user",
+               "repo"
+            ]
+         },
          "path" : "/:format/repos/show/:user",
          "method" : "GET"
       },
       "repos_search" : {
-         "required" : [
-            "format",
-            "q"
-         ],
+         "params" : {
+            "required" : [
+               "format",
+               "q"
+            ]
+         },
          "path" : "/:format/repos/search/:q",
          "method" : "GET"
       },
       "update_profile" : {
-         "required" : [
-            "username",
-            "format"
-         ],
+         "params" : {
+            "required" : [
+               "username",
+               "format"
+            ]
+         },
          "path" : "/:format/user/show/:username",
          "method" : "POST",
-         "authentication" : "1"
+         "authentication" : true
       },
       "watch_repo" : {
-         "required" : [
-            "format",
-            "user",
-            "repo"
-         ],
+         "params" : {
+            "required" : [
+               "format",
+               "user",
+               "repo"
+            ]
+         },
          "path" : "/:format/repos/watch/:user/:repo",
          "method" : "GET",
-         "authentication" : "1"
+         "authentication" : true
       },
       "create_repo" : {
-         "required" : [
-            "format"
-         ],
+         "params" : {
+            "required" : [
+               "format"
+            ]
+         },
          "path" : "/:format/repos/create",
          "method" : "POST",
-         "authentication" : "1"
+         "authentication" : true
       },
       "user_following" : {
-         "required" : [
-            "user",
-            "format"
-         ],
+         "params" : {
+            "required" : [
+               "user",
+               "format"
+            ]
+         },
          "path" : "/:format/user/show/:user/following",
          "method" : "GET"
       },
       "set_repo_info" : {
-         "required" : [
-            "format",
-            "user",
-            "repo"
-         ],
+         "params" : {
+            "required" : [
+               "format",
+               "user",
+               "repo"
+            ]
+         },
          "path" : "/:format/repos/show/:user/:repo",
          "method" : "POST",
-         "authentication" : "1"
+         "authentication" : true
       },
       "watched_repos" : {
-         "required" : [
-            "format",
-            "user"
-         ],
+         "params" : {
+            "required" : [
+               "format",
+               "user"
+            ]
+         },
          "path" : "/:format/user/watched/:user",
          "method" : "GET"
       },
       "user_followers" : {
-         "required" : [
-            "user",
-            "format"
-         ],
+         "params" : {
+            "required" : [
+               "user",
+               "format"
+            ]
+         },
          "path" : "/:format/user/show/:user/followers",
          "method" : "GET"
       },
       "del_public_key" : {
-         "required" : [
-            "format"
-         ],
+         "params" : {
+            "required" : [
+               "format"
+            ]
+         },
          "path" : "/:format/user/key/remove",
          "method" : "POST",
-         "authentication" : "1"
+         "authentication" : true
       }
    },
    "name" : "GitHub",

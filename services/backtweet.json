@@ -1,17 +1,19 @@
 {
    "api_base_url" : "http://api.backtype.com",
-   "version" : "0.1",
+   "version" : "0.2",
    "methods" : {
       "tweets_by_url" : {
-         "params" : [
-            "itemsperpage",
-            "start",
-            "end"
-         ],
-         "required" : [
-            "q",
-            "key"
-         ],
+         "params" : {
+            "optinal" : [
+               "itemsperpage",
+               "start",
+               "end"
+            ],
+            "required" : [
+               "q",
+               "key"
+            ]
+         },
          "expected" : [
             "200"
          ],
@@ -19,13 +21,15 @@
          "method" : "GET"
       },
       "stats_by_url" : {
-         "params" : [
-            "batch"
-         ],
-         "required" : [
-            "q",
-            "key"
-         ],
+         "params" : {
+            "required" : [
+               "q",
+               "key"
+            ],
+            "optional" : [
+               "batch"
+            ]
+         },
          "expected" : [
             "200"
          ],
@@ -33,10 +37,12 @@
          "method" : "GET"
       },
       "good_tweets_by_url" : {
-         "required" : [
-            "q",
-            "key"
-         ],
+         "params" : {
+            "required" : [
+               "q",
+               "key"
+            ]
+         },
          "expected" : [
             "200"
          ],

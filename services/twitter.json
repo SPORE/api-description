@@ -1,115 +1,149 @@
 {
    "api_base_url" : "http://api.twitter.com/1",
-   "version" : "0.1",
+   "version" : "0.2",
    "methods" : {
       "retweets_of_me" : {
-         "params" : [
-            "since_id",
-            "max_id",
-            "count",
-            "page",
-            "trim_user",
-            "include_entities"
-         ],
+         "params" : {
+            "required" : [
+               "format"
+            ],
+            "optional" : [
+               "since_id",
+               "max_id",
+               "count",
+               "page",
+               "trim_user",
+               "include_entities"
+            ]
+         },
          "path" : "/statuses/retweets_of_me.:format",
          "method" : "GET",
-         "authentication" : "1"
+         "authentication" : true
       },
       "friends_timeline" : {
-         "params" : [
-            "since_id",
-            "max_id",
-            "count",
-            "page",
-            "trim_user",
-            "include_rts",
-            "include_entities"
-         ],
+         "params" : {
+            "required" : [
+               "format"
+            ],
+            "optional" : [
+               "since_id",
+               "max_id",
+               "count",
+               "page",
+               "trim_user",
+               "include_rts",
+               "include_entities"
+            ]
+         },
          "path" : "/statuses/friends_timeline.:format",
          "method" : "GET",
-         "authentication" : "1"
+         "authentication" : true
       },
       "user_timeline" : {
-         "params" : [
-            "user_id",
-            "screen_name",
-            "since_id",
-            "max_id",
-            "count",
-            "page",
-            "trim_user",
-            "include_rts",
-            "include_entities"
-         ],
+         "params" : {
+            "required" : [
+               "format"
+            ],
+            "optional" : [
+               "user_id",
+               "screen_name",
+               "since_id",
+               "max_id",
+               "count",
+               "page",
+               "trim_user",
+               "include_rts",
+               "include_entities"
+            ]
+         },
          "path" : "/statuses/user_timeline.:format",
          "method" : "GET"
       },
       "public_timeline" : {
-         "params" : [
-            "trim_user",
-            "include_entities"
-         ],
-         "required" : [
-            "format"
-         ],
+         "params" : {
+            "required" : [
+               "format"
+            ],
+            "optional" : [
+               "trim_user",
+               "include_entities"
+            ]
+         },
          "path" : "/statuses/public_timeline.:format",
          "method" : "GET"
       },
       "mentions" : {
-         "params" : [
-            "since_id",
-            "max_id",
-            "count",
-            "page",
-            "trim_user",
-            "include_rts",
-            "include_entities"
-         ],
+         "params" : {
+            "required" : [
+               "format"
+            ],
+            "optional" : [
+               "since_id",
+               "max_id",
+               "count",
+               "page",
+               "trim_user",
+               "include_rts",
+               "include_entities"
+            ]
+         },
          "path" : "/statuses/mentions.:format",
          "method" : "GET",
-         "authentication" : "1"
+         "authentication" : true
       },
       "home_timeline" : {
-         "params" : [
-            "since_id",
-            "max_id",
-            "count",
-            "page",
-            "trim_user",
-            "include_entities"
-         ],
-         "required" : [
-            "format"
-         ],
+         "params" : {
+            "params" : [
+               "since_id",
+               "max_id",
+               "count",
+               "page",
+               "trim_user",
+               "include_entities"
+            ],
+            "required" : [
+               "format"
+            ]
+         },
          "path" : "/statuses/home_timeline.:format",
          "method" : "GET",
-         "authentication" : "1"
+         "authentication" : true
       },
       "retweeted_by_me" : {
-         "params" : [
-            "since_id",
-            "max_id",
-            "count",
-            "page",
-            "trim_user",
-            "include_entities"
-         ],
+         "params" : {
+            "required" : [
+               "format"
+            ],
+            "optional" : [
+               "since_id",
+               "max_id",
+               "count",
+               "page",
+               "trim_user",
+               "include_entities"
+            ]
+         },
          "path" : "/statuses/retweeted_by_me.:format",
          "method" : "GET",
-         "authentication" : "1"
+         "authentication" : true
       },
       "retweeted_to_me" : {
-         "params" : [
-            "since_id",
-            "max_id",
-            "count",
-            "page",
-            "trim_user",
-            "include_entities"
-         ],
+         "params" : {
+            "required" : [
+               "format"
+            ],
+            "optional" : [
+               "since_id",
+               "max_id",
+               "count",
+               "page",
+               "trim_user",
+               "include_entities"
+            ]
+         },
          "path" : "/statuses/retweeted_to_me.:format",
          "method" : "GET",
-         "authentication" : "1"
+         "authentication" : true
       }
    },
    "api_format" : [

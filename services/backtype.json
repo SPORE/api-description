@@ -1,17 +1,19 @@
 {
    "api_base_url" : "http://api.backtype.com/",
-   "version" : "0.1",
+   "version" : "0.2",
    "methods" : {
       "comments_connect" : {
-         "params" : [
-            "sources",
-            "sort",
-            "key"
-         ],
-         "required" : [
-            "format",
-            "url"
-         ],
+         "params" : {
+            "required" : [
+               "format",
+               "url"
+            ],
+            "optional" : [
+               "sources",
+               "sort",
+               "key"
+            ]
+         },
          "expected" : [
             "200"
          ],
@@ -19,11 +21,13 @@
          "method" : "GET"
       },
       "comments_stats_by_page" : {
-         "required" : [
-            "url",
-            "format",
-            "key"
-         ],
+         "params" : {
+            "required" : [
+               "url",
+               "format",
+               "key"
+            ]
+         },
          "expected" : [
             "200"
          ],
@@ -31,11 +35,13 @@
          "method" : "GET"
       },
       "comments_connect_stats" : {
-         "required" : [
-            "format",
-            "url",
-            "key"
-         ],
+         "params" : {
+            "required" : [
+               "format",
+               "url",
+               "key"
+            ]
+         },
          "expected" : [
             "200"
          ],
@@ -43,15 +49,17 @@
          "method" : "GET"
       },
       "comments_search" : {
-         "params" : [
-            "start",
-            "end"
-         ],
-         "required" : [
-            "format",
-            "q",
-            "key"
-         ],
+         "params" : {
+            "required" : [
+               "format",
+               "q",
+               "key"
+            ],
+            "optional" : [
+               "start",
+               "end"
+            ]
+         },
          "expected" : [
             "200"
          ],
@@ -59,11 +67,13 @@
          "method" : "GET"
       },
       "comments_by_author_from_url" : {
-         "required" : [
-            "format",
-            "key",
-            "url"
-         ],
+         "params" : {
+            "required" : [
+               "format",
+               "key",
+               "url"
+            ]
+         },
          "expected" : [
             "200"
          ],
@@ -71,11 +81,13 @@
          "method" : "GET"
       },
       "comments_by_page" : {
-         "required" : [
-            "url",
-            "format",
-            "key"
-         ],
+         "params" : {
+            "required" : [
+               "url",
+               "format",
+               "key"
+            ]
+         },
          "expected" : [
             "200"
          ],
