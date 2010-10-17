@@ -1,161 +1,143 @@
 {
-   "api_base_url" : "http://api.twitter.com/1",
+   "base_url" : "http://api.twitter.com/1",
    "version" : "0.2",
    "methods" : {
       "retweets_of_me" : {
-         "params" : {
-            "required" : [
-               "format"
-            ],
-            "optional" : [
-               "since_id",
-               "max_id",
-               "count",
-               "page",
-               "trim_user",
-               "include_entities"
-            ]
-         },
+         "required_params" : [
+            "format"
+         ],
+         "optional_params" : [
+            "since_id",
+            "max_id",
+            "count",
+            "page",
+            "trim_user",
+            "include_entities"
+         ],
          "path" : "/statuses/retweets_of_me.:format",
          "method" : "GET",
          "authentication" : true
       },
       "friends_timeline" : {
-         "params" : {
-            "required" : [
-               "format"
-            ],
-            "optional" : [
-               "since_id",
-               "max_id",
-               "count",
-               "page",
-               "trim_user",
-               "include_rts",
-               "include_entities"
-            ]
-         },
+         "required_params" : [
+            "format"
+         ],
+         "optional_params" : [
+            "since_id",
+            "max_id",
+            "count",
+            "page",
+            "trim_user",
+            "include_rts",
+            "include_entities"
+         ],
          "path" : "/statuses/friends_timeline.:format",
          "method" : "GET",
          "authentication" : true
       },
       "user_timeline" : {
-         "params" : {
-            "required" : [
-               "format"
-            ],
-            "optional" : [
-               "user_id",
-               "screen_name",
-               "since_id",
-               "max_id",
-               "count",
-               "page",
-               "trim_user",
-               "include_rts",
-               "include_entities"
-            ]
-         },
+         "required_params" : [
+            "format"
+         ],
+         "optional_params" : [
+            "user_id",
+            "screen_name",
+            "since_id",
+            "max_id",
+            "count",
+            "page",
+            "trim_user",
+            "include_rts",
+            "include_entities"
+         ],
          "path" : "/statuses/user_timeline.:format",
          "method" : "GET"
       },
       "public_timeline" : {
-         "params" : {
-            "required" : [
-               "format"
-            ],
-            "optional" : [
-               "trim_user",
-               "include_entities"
-            ]
-         },
+         "required_params" : [
+            "format"
+         ],
+         "optional_params" : [
+            "trim_user",
+            "include_entities"
+         ],
          "path" : "/statuses/public_timeline.:format",
          "method" : "GET"
       },
       "mentions" : {
-         "params" : {
-            "required" : [
-               "format"
-            ],
-            "optional" : [
-               "since_id",
-               "max_id",
-               "count",
-               "page",
-               "trim_user",
-               "include_rts",
-               "include_entities"
-            ]
-         },
+         "required_params" : [
+            "format"
+         ],
+         "optional_params" : [
+            "since_id",
+            "max_id",
+            "count",
+            "page",
+            "trim_user",
+            "include_rts",
+            "include_entities"
+         ],
          "path" : "/statuses/mentions.:format",
          "method" : "GET",
          "authentication" : true
       },
       "home_timeline" : {
-         "params" : {
-            "params" : [
-               "since_id",
-               "max_id",
-               "count",
-               "page",
-               "trim_user",
-               "include_entities"
-            ],
-            "required" : [
-               "format"
-            ]
-         },
+         "optional_params" : [
+            "since_id",
+            "max_id",
+            "count",
+            "page",
+            "trim_user",
+            "include_entities"
+         ],
+         "required_params" : [
+            "format"
+         ],
          "path" : "/statuses/home_timeline.:format",
          "method" : "GET",
          "authentication" : true
       },
       "retweeted_by_me" : {
-         "params" : {
-            "required" : [
-               "format"
-            ],
-            "optional" : [
-               "since_id",
-               "max_id",
-               "count",
-               "page",
-               "trim_user",
-               "include_entities"
-            ]
-         },
+         "required_params" : [
+            "format"
+         ],
+         "optional_params" : [
+            "since_id",
+            "max_id",
+            "count",
+            "page",
+            "trim_user",
+            "include_entities"
+         ],
          "path" : "/statuses/retweeted_by_me.:format",
          "method" : "GET",
          "authentication" : true
       },
       "retweeted_to_me" : {
-         "params" : {
-            "required" : [
-               "format"
-            ],
-            "optional" : [
-               "since_id",
-               "max_id",
-               "count",
-               "page",
-               "trim_user",
-               "include_entities"
-            ]
-         },
+         "required_params" : [
+            "format"
+         ],
+         "optional_params" : [
+            "since_id",
+            "max_id",
+            "count",
+            "page",
+            "trim_user",
+            "include_entities"
+         ],
          "path" : "/statuses/retweeted_to_me.:format",
          "method" : "GET",
          "authentication" : true
       }
    },
-   "api_format" : [
+   "formats" : [
       "json",
       "rss",
       "xml",
       "atom"
    ],
    "name" : "Twitter",
-   "author" : [
-      "franck cuny <franck@lumberjaph.net>"
-   ],
+   "authority" : "GITHUB:franckcuny",
    "meta" : {
       "documentation" : "http://dev.twitter.com/"
    }

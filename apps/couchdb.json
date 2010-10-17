@@ -2,90 +2,76 @@
    "version" : "0.2",
    "methods" : {
       "create_document_without_id" : {
-         "params" : {
-            "required" : [
-               "database"
-            ]
-         },
+         "required_params" : [
+            "database"
+         ],
          "path" : "/:database",
          "method" : "POST"
       },
       "get_all_documents" : {
-         "params" : {
-            "required" : [
-               "database"
-            ],
-            "optional" : [
-               "descending",
-               "startkey",
-               "endkey",
-               "limit",
-               "include_docs"
-            ]
-         },
+         "required_params" : [
+            "database"
+         ],
+         "optional_params" : [
+            "descending",
+            "startkey",
+            "endkey",
+            "limit",
+            "include_docs"
+         ],
          "path" : "/:database/_all_docs",
          "method" : "GET"
       },
       "create_document_with_id" : {
-         "params" : {
-            "required" : [
-               "database",
-               "doc_id"
-            ]
-         },
+         "required_params" : [
+            "database",
+            "doc_id"
+         ],
          "path" : "/:database/:doc_id",
          "method" : "POST"
       },
       "get_document" : {
-         "params" : {
-            "required" : [
-               "database",
-               "doc_id"
-            ],
-            "optional" : [
-               "rev",
-               "revs"
-            ]
-         },
+         "required_params" : [
+            "database",
+            "doc_id"
+         ],
+         "optional_params" : [
+            "rev",
+            "revs"
+         ],
          "path" : "/:database/:doc_id",
          "method" : "GET"
       },
       "get_all_documents_by_seq" : {
-         "params" : {
-            "required" : [
-               "database"
-            ],
-            "optional" : [
-               "startkey",
-               "endkey",
-               "limit",
-               "include_docs"
-            ]
-         },
+         "required_params" : [
+            "database"
+         ],
+         "optional_params" : [
+            "startkey",
+            "endkey",
+            "limit",
+            "include_docs"
+         ],
          "path" : "/:database/_all_docs_by_seq",
          "method" : "GET"
       },
       "delete_document" : {
-         "params" : {
-            "required" : [
-               "database",
-               "doc_id"
-            ],
-            "optional" : [
-               "rev"
-            ]
-         },
+         "required_params" : [
+            "database",
+            "doc_id"
+         ],
+         "optional_params" : [
+            "rev"
+         ],
          "path" : "/:database/:doc_id",
          "method" : "DELETE"
       }
    },
-   "api_format" : [
+   "formats" : [
       "json"
    ],
    "name" : "CouchDB",
-   "author" : [
-      "franck cuny <franck@lumberjaph.net>"
-   ],
+   "authority" : "GITHUB:franckcuny",
    "meta" : {
       "documentation" : "http://wiki.apache.org/couchdb/HTTP_Document_API"
    }

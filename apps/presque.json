@@ -2,63 +2,51 @@
    "version" : "0.2",
    "methods" : {
       "fetch_job" : {
-         "params" : {
-            "required" : [
-               "queue_name"
-            ]
-         },
-         "expected" : [
+         "required_params" : [
+            "queue_name"
+         ],
+         "expected_status" : [
             "200"
          ],
          "path" : "/q/:queue_name",
          "method" : "GET"
       },
       "queue_size" : {
-         "params" : {
-            "required" : [
-               "queue_name"
-            ]
-         },
+         "required_params" : [
+            "queue_name"
+         ],
          "path" : "/status/:queue_name",
          "method" : "GET"
       },
       "reset_queue" : {
-         "params" : {
-            "required" : [
-               "queue_name"
-            ]
-         },
+         "required_params" : [
+            "queue_name"
+         ],
          "path" : "/q/:queue_name",
          "method" : "DELETE"
       },
       "worker_stats" : {
-         "params" : {
-            "optional:" : [
-               "worker_id"
-            ]
-         },
+         "optional_params" : [
+            "worker_id"
+         ],
          "path" : "/w/",
          "method" : "GET"
       },
       "unregister_worker" : {
-         "params" : {
-            "required" : [
-               "queue_name"
-            ]
-         },
+         "required_params" : [
+            "queue_name"
+         ],
          "path" : "/w/:queue_name",
          "method" : "DELETE"
       },
       "create_job" : {
-         "params" : {
-            "required" : [
-               "queue_name"
-            ],
-            "optional" : [
-               "delayed",
-               "uniq"
-            ]
-         },
+         "required_params" : [
+            "queue_name"
+         ],
+         "optional_params" : [
+            "delayed",
+            "uniq"
+         ],
          "path" : "/q/:queue_name",
          "method" : "POST"
       },
@@ -67,92 +55,74 @@
          "method" : "GET"
       },
       "failed_job" : {
-         "params" : {
-            "required" : [
-               "queue_name"
-            ]
-         },
+         "required_params" : [
+            "queue_name"
+         ],
          "path" : "/q/:queue_name",
          "method" : "PUT"
       },
       "register_worker" : {
-         "params" : {
-            "required" : [
-               "queue_name"
-            ]
-         },
+         "required_params" : [
+            "queue_name"
+         ],
          "path" : "/w/:queue_name",
          "method" : "POST"
       },
       "queue_stats" : {
-         "params" : {
-            "optional" : [
-               "queue_name"
-            ]
-         },
+         "optional_params" : [
+            "queue_name"
+         ],
          "path" : "/w/",
          "method" : "GET"
       },
       "change_queue_status" : {
-         "params" : {
-            "required" : [
-               "queue_name"
-            ]
-         },
+         "required_params" : [
+            "queue_name"
+         ],
          "path" : "/control/:queue_name",
          "method" : "POST"
       },
       "fetch_jobs" : {
-         "params" : {
-            "required" : [
-               "queue_name"
-            ],
-            "optional" : [
-               "batch_size"
-            ]
-         },
-         "expected" : [
+         "required_params" : [
+            "queue_name"
+         ],
+         "optional_params" : [
+            "batch_size"
+         ],
+         "expected_status" : [
             "200"
          ],
          "path" : "/q/:queue_name",
          "method" : "GET"
       },
       "queue_info" : {
-         "params" : {
-            "required" : [
-               "queue_name"
-            ]
-         },
+         "required_params" : [
+            "queue_name"
+         ],
          "path" : "/j/:queue_name",
          "method" : "GET"
       },
       "create_jobs" : {
-         "params" : {
-            "required" : [
-               "queue_name"
-            ],
-            "optional" : [
-               "delayed"
-            ]
-         },
+         "required_params" : [
+            "queue_name"
+         ],
+         "optional_params" : [
+            "delayed"
+         ],
          "path" : "/q/:queue_name",
          "method" : "POST"
       },
       "queue_status" : {
-         "params" : {
-            "required" : [
-               "queue_name"
-            ]
-         },
+         "required_params" : [
+            "queue_name"
+         ],
          "path" : "/control/:queue_name",
          "method" : "GET"
       }
    },
-   "api_format" : [
+   "formats" : [
       "json"
    ],
    "name" : "Presque",
-   "author" : [
-      "franck cuny <franck@lumberjaph.net>"
-   ]
+   "authority" : "GITHUB:franckcuny"
 }

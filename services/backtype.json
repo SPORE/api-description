@@ -1,94 +1,82 @@
 {
-   "api_base_url" : "http://api.backtype.com/",
+   "base_url" : "http://api.backtype.com/",
    "version" : "0.2",
    "methods" : {
       "comments_connect" : {
-         "params" : {
-            "required" : [
-               "format",
-               "url"
-            ],
-            "optional" : [
-               "sources",
-               "sort",
-               "key"
-            ]
-         },
-         "expected" : [
+         "required_params" : [
+            "format",
+            "url"
+         ],
+         "optional_params" : [
+            "sources",
+            "sort",
+            "key"
+         ],
+         "expected_status" : [
             "200"
          ],
          "path" : "/comments/connect.:format",
          "method" : "GET"
       },
       "comments_stats_by_page" : {
-         "params" : {
-            "required" : [
-               "url",
-               "format",
-               "key"
-            ]
-         },
-         "expected" : [
+         "required_params" : [
+            "url",
+            "format",
+            "key"
+         ],
+         "expected_status" : [
             "200"
          ],
          "path" : "/post/stats.:format",
          "method" : "GET"
       },
       "comments_connect_stats" : {
-         "params" : {
-            "required" : [
-               "format",
-               "url",
-               "key"
-            ]
-         },
-         "expected" : [
+         "required_params" : [
+            "format",
+            "url",
+            "key"
+         ],
+         "expected_status" : [
             "200"
          ],
          "path" : "/comments/connect/stats.:format",
          "method" : "GET"
       },
       "comments_search" : {
-         "params" : {
-            "required" : [
-               "format",
-               "q",
-               "key"
-            ],
-            "optional" : [
-               "start",
-               "end"
-            ]
-         },
-         "expected" : [
+         "required_params" : [
+            "format",
+            "q",
+            "key"
+         ],
+         "optional_params" : [
+            "start",
+            "end"
+         ],
+         "expected_status" : [
             "200"
          ],
          "path" : "/comments/search.:format",
          "method" : "GET"
       },
       "comments_by_author_from_url" : {
-         "params" : {
-            "required" : [
-               "format",
-               "key",
-               "url"
-            ]
-         },
-         "expected" : [
+         "required_params" : [
+            "format",
+            "key",
+            "url"
+         ],
+         "expected_status" : [
             "200"
          ],
          "path" : "/url/:url/comments.:format",
          "method" : "GET"
       },
       "comments_by_page" : {
-         "params" : {
-            "required" : [
-               "url",
-               "format",
-               "key"
-            ]
-         },
-         "expected" : [
+         "required_params" : [
+            "url",
+            "format",
+            "key"
+         ],
+         "expected_status" : [
             "200"
          ],
          "path" : "/post/comments.:format",
@@ -96,9 +84,7 @@
       }
    },
    "name" : "Backtype",
-   "author" : [
-      "franck cuny <franc@lumberjaph.net>"
-   ],
+   "authority" : "GITHUB:franckcuny",
    "meta" : {
       "documentation" : "http://www.backtype.com/developers"
    }

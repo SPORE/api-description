@@ -1,14 +1,12 @@
 {
-   "api_base_url" : "api.ihackernews.com",
+   "base_url" : "api.ihackernews.com",
    "version" : "0.02",
    "methods" : {
       "askhn_posts" : {
-         "params" : {
-            "optional" : [
-               "nextid"
-            ]
-         },
-         "expected" : [
+         "optional_params" : [
+            "nextid"
+         ],
+         "expected_status" : [
             "200"
          ],
          "path" : "/ask/:nextid",
@@ -23,12 +21,10 @@
          "method" : "POST"
       },
       "new_posts" : {
-         "params" : {
-            "optional" : [
-               "nextid"
-            ]
-         },
-         "expected" : [
+         "optional_params" : [
+            "nextid"
+         ],
+         "expected_status" : [
             "200"
          ],
          "path" : "/new/:nextid",
@@ -39,64 +35,54 @@
          "method" : "POST"
       },
       "user_profile" : {
-         "params" : {
-            "required" : [
-               "userid"
-            ]
-         },
-         "expected" : [
+         "required_params" : [
+            "userid"
+         ],
+         "expected_status" : [
             "200"
          ],
          "path" : "/profile/:userid",
          "method" : "GET"
       },
       "retrieve_page" : {
-         "params" : {
-            "optinal" : [
-               "nextid"
-            ]
-         },
-         "expected" : [
+         "optional_params" : [
+            "nextid"
+         ],
+         "expected_status" : [
             "200"
          ],
          "path" : "/page/:nextid",
          "method" : "GET"
       },
       "posts_from_user" : {
-         "params" : {
-            "required" : [
-               "username"
-            ],
-            "optional" : [
-               "nextid"
-            ]
-         },
-         "expected" : [
+         "required_params" : [
+            "username"
+         ],
+         "optional_params" : [
+            "nextid"
+         ],
+         "expected_status" : [
             "200"
          ],
          "path" : "/by/:username/:nextid",
          "method" : "GET"
       },
       "comments_for_post" : {
-         "params" : {
-            "required" : [
-               "id"
-            ]
-         },
-         "expected" : [
+         "required_params" : [
+            "id"
+         ],
+         "expected_status" : [
             "200"
          ],
          "path" : "/comments/:id",
          "method" : "GET"
       }
    },
-   "api_format" : [
+   "formats" : [
       "json"
    ],
    "name" : "ihackernews",
-   "author" : [
-      "franck cuny <franck@lumberjaph.net>"
-   ],
+   "authority" : "GITHUB:franckcuny",
    "meta" : {
       "documentation" : "http://api.ihackernews.com/"
    }
