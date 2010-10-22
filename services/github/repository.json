@@ -1,0 +1,85 @@
+{
+   "base_url" : "http://github.com/api/v2/",
+   "version" : "0.2",
+   "methods" : {
+      "unwatch_repo" : {
+         "required_params" : [
+            "format",
+            "user",
+            "repo"
+         ],
+         "path" : "/:format/repos/unwatch/:user/:repo",
+         "method" : "GET",
+         "authentication" : true
+      },
+      "repos_info" : {
+         "required_params" : [
+            "format",
+            "user",
+            "repo"
+         ],
+         "path" : "/:format/repos/:user/:repo",
+         "method" : "GET"
+      },
+      "fork_repos" : {
+         "required_params" : [
+            "format",
+            "user",
+            "repo"
+         ],
+         "path" : "/:format/repos/fork/:user/:repo",
+         "method" : "GET",
+         "authentication" : true
+      },
+      "list_all_repos" : {
+         "required_params" : [
+            "format",
+            "user",
+            "repo"
+         ],
+         "path" : "/:format/repos/show/:user",
+         "method" : "GET"
+      },
+      "repos_search" : {
+         "required_params" : [
+            "format",
+            "q"
+         ],
+         "path" : "/:format/repos/search/:q",
+         "method" : "GET"
+      },
+      "watch_repo" : {
+         "required_params" : [
+            "format",
+            "user",
+            "repo"
+         ],
+         "path" : "/:format/repos/watch/:user/:repo",
+         "method" : "GET",
+         "authentication" : true
+      },
+      "create_repo" : {
+         "required_params" : [
+            "format"
+         ],
+         "path" : "/:format/repos/create",
+         "method" : "POST",
+         "authentication" : true
+      },
+      "set_repo_info" : {
+         "required_params" : [
+            "format",
+            "user",
+            "repo"
+         ],
+         "path" : "/:format/repos/show/:user/:repo",
+         "method" : "POST",
+         "authentication" : true
+      }
+   },
+   "name" : "GitHub",
+   "authority" : "http://github.com/SPORE",
+   "meta" : {
+      "documentation" : "http://develop.github.com/"
+   }
+}
