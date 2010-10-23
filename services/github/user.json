@@ -20,10 +20,9 @@
       },
       "my_information" : {
          "required_params" : [
-            "username",
             "format"
          ],
-         "path" : "/:format/user/show/:username",
+         "path" : "/:format/user/show",
          "method" : "GET",
          "authentication" : true
       },
