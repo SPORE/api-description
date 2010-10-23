@@ -156,7 +156,7 @@
             "format",
             "user"
          ],
-         "path" : "/:format/user/watched/:user",
+         "path" : "/:format/repos/watched/:user",
          "method" : "GET"
       },
       "user_followers" : {
