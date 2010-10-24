@@ -176,6 +176,7 @@
          "authentication" : true
       }
    },
+   "expected_status" : [ 200 ],
    "name" : "GitHub",
    "authority" : "GITHUB:franckcuny",
    "meta" : {

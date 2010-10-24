@@ -102,6 +102,7 @@
          "method" : "GET"
       }
    },
+   "expected_status" : [ 200 ],
    "name" : "GitHub",
    "authority" : "http://github.com/SPORE",
    "meta" : {
