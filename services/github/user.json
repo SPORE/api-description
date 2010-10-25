@@ -3,103 +3,159 @@
    "version" : "0.2",
    "methods" : {
       "user_search" : {
+         "path" : "/:format/user/search/:search",
+         "method" : "GET",
          "required_params" : [
             "format",
             "search"
-         ],
-         "path" : "/:format/user/search/:search",
-         "method" : "GET"
+         ]
       },
       "user_information" : {
-         "required_params" : [
-            "username",
-            "format"
-         ],
          "path" : "/:format/user/show/:username",
-         "method" : "GET"
+         "method" : "GET",
+         "required_params" : [
+            "format",
+            "username"
+         ]
       },
       "my_information" : {
+         "path" : "/:format/user/show",
+         "method" : "GET",
          "required_params" : [
             "format"
          ],
-         "path" : "/:format/user/show",
-         "method" : "GET",
          "authentication" : true
       },
       "update_profile" : {
-         "required_params" : [
-            "username",
-            "format"
-         ],
          "path" : "/:format/user/show/:username",
          "method" : "POST",
-         "authentication" : true
-      },
-      "follow" : {
+         "form-data" : {
+            "values[name]"       : ":name",
+            "values[email]"      : ":email",
+            "values[blog]"       : ":blog",
+            "values[company]"    : ":company",
+            "values[location]"   : ":location"
+         },
          "required_params" : [
-            "user",
-            "format"
+            "format",
+            "username"
          ],
-         "path" : "/:format/user/follow/:user",
-         "method" : "POST",
-         "authentication" : true
-      },
-      "unfollow" : {
-         "required_params" : [
-            "user",
-            "format"
+         "optional_params" : [
+            "name",
+            "email",
+            "blog",
+            "company",
+            "location"
          ],
-         "path" : "/:format/user/unfollow/:user",
-         "method" : "POST",
-         "authentication" : true
-      },
-      "list_public_keys" : {
-         "required_params" : [
-            "format"
-         ],
-         "path" : "/:format/user/keys",
-         "method" : "GET",
-         "authentication" : true
-      },
-      "add_public_key" : {
-         "required_params" : [
-            "format"
-         ],
-         "path" : "/:format/user/key/add",
-         "method" : "POST",
-         "authentication" : true
-      },
-      "del_public_key" : {
-         "required_params" : [
-            "format"
-         ],
-         "path" : "/:format/user/key/remove",
-         "method" : "POST",
          "authentication" : true
       },
       "user_following" : {
-         "required_params" : [
-            "user",
-            "format"
-         ],
          "path" : "/:format/user/show/:user/following",
-         "method" : "GET"
+         "method" : "GET",
+         "required_params" : [
+            "format",
+            "user"
+         ]
       },
-      "watched_repos" : {
+      "user_followers" : {
+         "path" : "/:format/user/show/:user/followers",
+         "method" : "GET",
+         "required_params" : [
+            "format",
+            "user"
+         ]
+      },
+      "follow" : {
+         "path" : "/:format/user/follow/:user",
+         "method" : "POST",
          "required_params" : [
             "format",
             "user"
          ],
-         "path" : "/:format/repos/watched/:user",
-         "method" : "GET"
+         "authentication" : true
       },
-      "user_followers" : {
+      "unfollow" : {
+         "path" : "/:format/user/unfollow/:user",
+         "method" : "POST",
          "required_params" : [
-            "user",
+            "format",
+            "user"
+         ],
+         "authentication" : true
+      },
+      "watched_repos" : {
+         "path" : "/:format/repos/watched/:user",
+         "method" : "GET",
+         "required_params" : [
+            "format",
+            "user"
+         ]
+      },
+      "list_public_keys" : {
+         "path" : "/:format/user/keys",
+         "method" : "GET",
+         "required_params" : [
             "format"
          ],
-         "path" : "/:format/user/show/:user/followers",
-         "method" : "GET"
+         "authentication" : true
+      },
+      "add_public_key" : {
+         "path" : "/:format/user/key/add",
+         "method" : "POST",
+         "form-data" : {
+            "title" :   ":title",
+            "key" :     ":key"
+         },
+         "required_params" : [
+            "format",
+            "title",
+            "key"
+         ],
+         "authentication" : true
+      },
+      "del_public_key" : {
+         "path" : "/:format/user/key/remove",
+         "method" : "POST",
+         "form-data" : {
+            "id" : ":id"
+         },
+         "required_params" : [
+            "format",
+            "id"
+         ],
+         "authentication" : true
+      },
+      "list_emails" : {
+         "path" : "/:format/user/emails",
+         "method" : "GET",
+         "required_params" : [
+            "format"
+         ],
+         "authentication" : true
+      },
+      "add_email" : {
+         "path" : "/:format/user/email/add",
+         "method" : "POST",
+         "form-data" : {
+            "email" : ":email"
+         },
+         "required_params" : [
+            "format",
+            "email"
+         ],
+         "authentication" : true
+      },
+      "del_email" : {
+         "path" : "/:format/user/email/remove",
+         "method" : "POST",
+         "form-data" : {
+            "email" : ":email"
+         },
+         "required_params" : [
+            "format",
+            "email"
+         ],
+         "authentication" : true
       }
    },
    "expected_status" : [ 200 ],

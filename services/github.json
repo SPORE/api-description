@@ -2,178 +2,428 @@
    "base_url" : "http://github.com/api/v2/",
    "version" : "0.2",
    "methods" : {
-      "follow" : {
-         "required_params" : [
-            "user",
-            "format"
-         ],
-         "path" : "/:format/user/follow/:user",
-         "method" : "POST",
-         "authentication" : true
-      },
       "user_search" : {
+         "path" : "/:format/user/search/:search",
+         "method" : "GET",
          "required_params" : [
             "format",
             "search"
-         ],
-         "path" : "/:format/user/search/:search",
-         "method" : "GET"
-      },
-      "unfollow" : {
-         "required_params" : [
-            "user",
-            "format"
-         ],
-         "path" : "/:format/user/unfollow/:user",
-         "method" : "POST",
-         "authentication" : true
-      },
-      "unwatch_repo" : {
-         "required_params" : [
-            "format",
-            "user",
-            "repo"
-         ],
-         "path" : "/:format/repos/unwatch/:user/:repo",
-         "method" : "GET",
-         "authentication" : true
+         ]
       },
       "user_information" : {
-         "required_params" : [
-            "username",
-            "format"
-         ],
          "path" : "/:format/user/show/:username",
-         "method" : "GET"
-      },
-      "list_public_keys" : {
-         "required_params" : [
-            "format"
-         ],
-         "path" : "/:format/user/keys",
          "method" : "GET",
-         "authentication" : true
-      },
-      "repos_info" : {
          "required_params" : [
             "format",
-            "user",
-            "repo"
-         ],
-         "path" : "/:format/repos/:user/:repo",
-         "method" : "GET"
-      },
-      "add_public_key" : {
-         "required_params" : [
-            "format"
-         ],
-         "path" : "/:format/user/key/add",
-         "method" : "POST",
-         "authentication" : true
-      },
-      "fork_repos" : {
-         "required_params" : [
-            "format",
-            "user",
-            "repo"
-         ],
-         "path" : "/:format/repos/fork/:user/:repo",
-         "method" : "GET",
-         "authentication" : true
+            "username"
+         ]
       },
       "my_information" : {
-         "required_params" : [
-            "format"
-         ],
          "path" : "/:format/user/show",
          "method" : "GET",
+         "required_params" : [
+            "format"
+         ],
          "authentication" : true
-      },
-      "list_all_repos" : {
-         "required_params" : [
-            "format",
-            "user",
-            "repo"
-         ],
-         "path" : "/:format/repos/show/:user",
-         "method" : "GET"
-      },
-      "repos_search" : {
-         "required_params" : [
-            "format",
-            "q"
-         ],
-         "path" : "/:format/repos/search/:q",
-         "method" : "GET"
       },
       "update_profile" : {
-         "required_params" : [
-            "username",
-            "format"
-         ],
          "path" : "/:format/user/show/:username",
          "method" : "POST",
-         "authentication" : true
-      },
-      "watch_repo" : {
+         "form-data" : {
+            "values[name]"       : ":name",
+            "values[email]"      : ":email",
+            "values[blog]"       : ":blog",
+            "values[company]"    : ":company",
+            "values[location]"   : ":location"
+         },
          "required_params" : [
             "format",
-            "user",
-            "repo"
+            "username"
          ],
-         "path" : "/:format/repos/watch/:user/:repo",
-         "method" : "GET",
-         "authentication" : true
-      },
-      "create_repo" : {
-         "required_params" : [
-            "format"
+         "optional_params" : [
+            "name",
+            "email",
+            "blog",
+            "company",
+            "location"
          ],
-         "path" : "/:format/repos/create",
-         "method" : "POST",
          "authentication" : true
       },
       "user_following" : {
-         "required_params" : [
-            "user",
-            "format"
-         ],
          "path" : "/:format/user/show/:user/following",
-         "method" : "GET"
-      },
-      "set_repo_info" : {
+         "method" : "GET",
          "required_params" : [
             "format",
-            "user",
-            "repo"
-         ],
-         "path" : "/:format/repos/show/:user/:repo",
-         "method" : "POST",
-         "authentication" : true
+            "user"
+         ]
       },
-      "watched_repos" : {
+      "user_followers" : {
+         "path" : "/:format/user/show/:user/followers",
+         "method" : "GET",
+         "required_params" : [
+            "format",
+            "user"
+         ]
+      },
+      "follow" : {
+         "path" : "/:format/user/follow/:user",
+         "method" : "POST",
          "required_params" : [
             "format",
             "user"
          ],
-         "path" : "/:format/repos/watched/:user",
-         "method" : "GET"
+         "authentication" : true
       },
-      "user_followers" : {
+      "unfollow" : {
+         "path" : "/:format/user/unfollow/:user",
+         "method" : "POST",
          "required_params" : [
-            "user",
+            "format",
+            "user"
+         ],
+         "authentication" : true
+      },
+      "watched_repos" : {
+         "path" : "/:format/repos/watched/:user",
+         "method" : "GET",
+         "required_params" : [
+            "format",
+            "user"
+         ]
+      },
+      "list_public_keys" : {
+         "path" : "/:format/user/keys",
+         "method" : "GET",
+         "required_params" : [
             "format"
          ],
-         "path" : "/:format/user/show/:user/followers",
-         "method" : "GET"
+         "authentication" : true
+      },
+      "add_public_key" : {
+         "path" : "/:format/user/key/add",
+         "method" : "POST",
+         "form-data" : {
+            "title" :   ":title",
+            "key" :     ":key"
+         },
+         "required_params" : [
+            "format",
+            "title",
+            "key"
+         ],
+         "authentication" : true
       },
       "del_public_key" : {
+         "path" : "/:format/user/key/remove",
+         "method" : "POST",
+         "form-data" : {
+            "id" : ":id"
+         },
+         "required_params" : [
+            "format",
+            "id"
+         ],
+         "authentication" : true
+      },
+      "list_emails" : {
+         "path" : "/:format/user/emails",
+         "method" : "GET",
          "required_params" : [
             "format"
          ],
-         "path" : "/:format/user/key/remove",
-         "method" : "POST",
          "authentication" : true
+      },
+      "add_email" : {
+         "path" : "/:format/user/email/add",
+         "method" : "POST",
+         "form-data" : {
+            "email" : ":email"
+         },
+         "required_params" : [
+            "format",
+            "email"
+         ],
+         "authentication" : true
+      },
+      "del_email" : {
+         "path" : "/:format/user/email/remove",
+         "method" : "POST",
+         "form-data" : {
+            "email" : ":email"
+         },
+         "required_params" : [
+            "format",
+            "email"
+         ],
+         "authentication" : true
+      },
+
+      "repos_search" : {
+         "path" : "/:format/repos/search/:q",
+         "method" : "GET",
+         "required_params" : [
+            "format",
+            "q"
+         ],
+         "optional_params" : [
+            "start_page",
+            "language"
+         ]
+      },
+      "repos_info" : {
+         "path" : "/:format/repos/:user/:repo",
+         "method" : "GET",
+         "required_params" : [
+            "format",
+            "user",
+            "repo"
+         ]
+      },
+      "set_repo_info" : {
+         "path" : "/:format/repos/show/:user/:repo",
+         "method" : "POST",
+         "form-data" : {
+            "values[description]"   : ":description",
+            "values[homepage]"      : ":homepage",
+            "values[has_wiki]"      : ":has_wiki",
+            "values[has_issues]"    : ":has_issues",
+            "values[has_download]"  : ":has_download"
+         },
+         "required_params" : [
+            "format",
+            "user",
+            "repo"
+         ],
+         "optional_params" : [
+            "description",
+            "homepage",
+            "has_wiki",
+            "has_issues",
+            "has_download"
+         ],
+         "authentication" : true
+      },
+      "list_all_repos" : {
+         "path" : "/:format/repos/show/:user",
+         "method" : "GET",
+         "required_params" : [
+            "format",
+            "user"
+         ]
+      },
+      "watch_repo" : {
+         "path" : "/:format/repos/watch/:user/:repo",
+         "method" : "GET",
+         "required_params" : [
+            "format",
+            "user",
+            "repo"
+         ],
+         "authentication" : true
+      },
+      "unwatch_repo" : {
+         "path" : "/:format/repos/unwatch/:user/:repo",
+         "method" : "GET",
+         "required_params" : [
+            "format",
+            "user",
+            "repo"
+         ],
+         "authentication" : true
+      },
+      "fork_repos" : {
+         "path" : "/:format/repos/fork/:user/:repo",
+         "method" : "GET",
+         "required_params" : [
+            "format",
+            "user",
+            "repo"
+         ],
+         "authentication" : true
+      },
+      "create_repo" : {
+         "path" : "/:format/repos/create",
+         "method" : "POST",
+         "form-data" : {
+            "name"         : ":name",
+            "description"  : ":description",
+            "homepage"     : ":homepage",
+            "public"       : ":public"
+         },
+         "required_params" : [
+            "format",
+            "name"
+         ],
+         "optional_params" : [
+            "description",
+            "homepage",
+            "public"
+         ],
+         "authentication" : true
+      },
+      "del_repo" : {
+         "path" : "/:format/repos/delete/:user/:repo",
+         "method" : "POST",
+         "required_params" : [
+            "format",
+            "user",
+            "repo"
+         ],
+         "authentication" : true
+      },
+      "set_private" : {
+         "path" : "/:format/repos/set/private/:user/:repo",
+         "method" : "POST",
+         "required_params" : [
+            "format",
+            "user",
+            "repo"
+         ],
+         "authentication" : true
+      },
+      "set_public" : {
+         "path" : "/:format/repos/set/public/:user/:repo",
+         "method" : "POST",
+         "required_params" : [
+            "format",
+            "user",
+            "repo"
+         ],
+         "authentication" : true
+      },
+      "list_repo_keys" : {
+         "path" : "/:format/repos/keys/:user/:repo",
+         "method" : "GET",
+         "required_params" : [
+            "format",
+            "user",
+            "repo"
+         ],
+         "authentication" : true
+      },
+      "add_repo_key" : {
+         "path" : "/:format/repos/key/:user/:repo/add",
+         "method" : "POST",
+         "form-data" : {
+            "title" :   ":title",
+            "key" :     ":key"
+         },
+         "required_params" : [
+            "format",
+            "user",
+            "repo",
+            "title",
+            "key"
+         ],
+         "authentication" : true
+      },
+      "del_repo_key" : {
+         "path" : "/:format/repos/key/:user/:repo/remove",
+         "method" : "POST",
+         "form-data" : {
+            "id" : ":id"
+         },
+         "required_params" : [
+            "format",
+            "user",
+            "repo",
+            "id"
+         ],
+         "authentication" : true
+      },
+      "list_collaborators" : {
+         "path" : "/:format/repos/show/:user/:repo/collaborators",
+         "method" : "GET",
+         "required_params" : [
+            "format",
+            "user",
+            "repo"
+         ],
+         "authentication" : true
+      },
+      "add_collaborator" : {
+         "path" : "/:format/repos/collaborators/:user/:repo/add/:collaborator",
+         "method" : "POST",
+         "required_params" : [
+            "format",
+            "user",
+            "repo",
+            "collaborator"
+         ],
+         "authentication" : true
+      },
+      "del_collaborator" : {
+         "path" : "/:format/repos/collaborators/:user/:repo/remove/:collaborator",
+         "method" : "POST",
+         "required_params" : [
+            "format",
+            "user",
+            "repo",
+            "collaborator"
+         ],
+         "authentication" : true
+      },
+      "list_pushable" : {
+         "path" : "/:format/repos/pushable",
+         "method" : "GET",
+         "required_params" : [
+            "format"
+         ],
+         "authentication" : true
+      },
+      "list_contributors" : {
+         "path" : "/:format/repos/show/:user/:repo/contributors",
+         "method" : "GET",
+         "required_params" : [
+            "format",
+            "user",
+            "repo"
+         ]
+      },
+      "repo_watchers" : {
+         "path" : "/:format/repos/show/:user/:repo/watchers",
+         "method" : "GET",
+         "required_params" : [
+            "format",
+            "user",
+            "repo"
+         ]
+      },
+      "repo_network" : {
+         "path" : "/:format/repos/show/:user/:repo/network",
+         "method" : "GET",
+         "required_params" : [
+            "format",
+            "user",
+            "repo"
+         ]
+      },
+      "repo_languages" : {
+         "path" : "/:format/repos/show/:user/:repo/languages",
+         "method" : "GET",
+         "required_params" : [
+            "format",
+            "user",
+            "repo"
+         ]
+      },
+      "repo_tags" : {
+         "path" : "/:format/repos/show/:user/:repo/tags",
+         "method" : "GET",
+         "required_params" : [
+            "format",
+            "user",
+            "repo"
+         ]
+      },
+      "repo_branches" : {
+         "path" : "/:format/repos/show/:user/:repo/branches",
+         "method" : "GET",
+         "required_params" : [
+            "format",
+            "user",
+            "repo"
+         ]
       }
    },
    "expected_status" : [ 200 ],
