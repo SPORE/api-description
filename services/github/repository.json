@@ -274,6 +274,7 @@
    "name" : "GitHub",
    "authority" : "http://github.com/SPORE",
    "meta" : {
-      "documentation" : "http://develop.github.com/"
+      "documentation" : "http://develop.github.com/",
+      "module" : "repository"
    }
 }
