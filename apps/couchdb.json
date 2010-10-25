@@ -44,6 +44,14 @@
          "path" : "/:database/:doc_id",
          "method" : "GET"
       },
+      "get_info" : {
+         "required_params" : [
+            "database",
+            "doc_id"
+         ],
+         "path" : "/:database/:doc_id",
+         "method" : "HEAD"
+      },
       "get_all_documents_by_seq" : {
          "required_params" : [
             "database"
