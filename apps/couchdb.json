@@ -5,6 +5,7 @@
          "required_params" : [
             "database"
          ],
+         "required_payload" : true,
          "path" : "/:database",
          "method" : "POST"
       },
@@ -27,6 +28,7 @@
             "database",
             "doc_id"
          ],
+         "required_payload" : true,
          "path" : "/:database/:doc_id",
          "method" : "POST"
       },
