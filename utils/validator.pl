@@ -24,7 +24,7 @@ my $schema_val = $rx->make_schema( read_from_json($schema) );
 my $res = $schema_val->check(read_from_json($desc));
 
 if ($res) {
-    print "ok - $desc is a valid description\n;";
+    print "ok - $desc is a valid description\n";
 }
 else{
     print "nok - $desc is not a valid description\n";
