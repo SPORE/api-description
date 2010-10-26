@@ -1,0 +1,171 @@
+{
+   "base_url" : "http://github.com/api/v2/",
+   "version" : "0.3",
+   "methods" : {
+      "issue_search" : {
+         "path" : "/:format/issues/search/:user/:repo/:state/:search_term",
+         "method" : "GET",
+         "required_params" : [
+            "format",
+            "user",
+            "repo",
+            "state",
+            "search_term"
+         ]
+      },
+      "get_issues" : {
+         "path" : "/:format/issues/list/:user/:repo/:state",
+         "method" : "GET",
+         "required_params" : [
+            "format",
+            "user",
+            "repo",
+            "state"
+         ]
+      },
+      "get_issues_by_label" : {
+         "path" : "/:format/issues/list/:user/:repo/label/:label",
+         "method" : "GET",
+         "required_params" : [
+            "format",
+            "user",
+            "repo",
+            "label"
+         ]
+      },
+      "get_issue_info" : {
+         "path" : "/:format/issues/show/:user/:repo/:number",
+         "method" : "GET",
+         "required_params" : [
+            "format",
+            "user",
+            "repo",
+            "number"
+         ]
+      },
+      "get_comments" : {
+         "path" : "/:format/issues/comments/:user/:repo/:number",
+         "method" : "GET",
+         "required_params" : [
+            "format",
+            "user",
+            "repo",
+            "number"
+         ]
+      },
+      "open" : {
+         "path" : "/:format/issues/open/:user/:repo",
+         "method" : "POST",
+         "form-data" : {
+            "title" :   ":title",
+            "body" :    ":body"
+         },
+         "required_params" : [
+            "format",
+            "user",
+            "repo"
+         ],
+         "optional_params" : [
+            "title",
+            "body"
+         ],
+         "authentication" : true
+      },
+      "close" : {
+         "path" : "/:format/issues/close/:user/:repo",
+         "method" : "POST",
+         "required_params" : [
+            "format",
+            "user",
+            "repo",
+            "number"
+         ],
+         "authentication" : true
+      },
+      "reopen" : {
+         "path" : "/:format/issues/reopen/:user/:repo",
+         "method" : "POST",
+         "required_params" : [
+            "format",
+            "user",
+            "repo",
+            "number"
+         ],
+         "authentication" : true
+      },
+      "update_issue" : {
+         "path" : "/:format/issues/edit/:user/:repo/:number",
+         "method" : "POST",
+         "form-data" : {
+            "title" :   ":title",
+            "body" :    ":body"
+         },
+         "required_params" : [
+            "format",
+            "user",
+            "repo",
+            "number"
+         ],
+         "optional_params" : [
+            "title",
+            "body"
+         ],
+         "authentication" : true
+      },
+      "get_labels" : {
+         "path" : "/:format/issues/labels/:user/:repo",
+         "method" : "GET",
+         "required_params" : [
+            "format",
+            "user",
+            "repo"
+         ]
+      },
+      "add_label" : {
+         "path" : "/:format/issues/label/add/:user/:repo/:label/:number",
+         "method" : "POST",
+         "required_params" : [
+            "format",
+            "user",
+            "repo",
+            "label",
+            "number"
+         ],
+         "authentication" : true
+      },
+      "remove_label" : {
+         "path" : "/:format/issues/label/remove/:user/:repo/:label/:number",
+         "method" : "POST",
+         "required_params" : [
+            "format",
+            "user",
+            "repo",
+            "label",
+            "number"
+         ],
+         "authentication" : true
+      },
+      "add_comment" : {
+         "path" : "/:format/issues/comment/:user/:repo/:number",
+         "method" : "POST",
+         "form-data" : {
+            "comment" : ":comment"
+         },
+         "required_params" : [
+            "format",
+            "user",
+            "repo",
+            "number",
+            "comment"
+         ],
+         "authentication" : true
+      }
+   },
+   "expected_status" : [ 200 ],
+   "name" : "GitHub",
+   "authority" : "http://github.com/SPORE",
+   "meta" : {
+      "documentation" : "http://develop.github.com/",
+      "module" : "issue"
+   }
+}

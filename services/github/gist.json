@@ -1,0 +1,38 @@
+{
+   "base_url" : "http://gist.github.com/api/v1/",
+   "version" : "0.3",
+   "methods" : {
+      "get_gist_info" : {
+         "path" : "/:format/:gist_id",
+         "method" : "GET",
+         "required_params" : [
+            "format",
+            "gist_id"
+         ]
+      },
+      "get_gist_content" : {
+         "base_url" : "http://gist.github.com/",
+         "path" : "/raw/:gist_id/:filename",
+         "method" : "GET",
+         "required_params" : [
+            "gist_id",
+            "filename"
+         ]
+      },
+      "get_gists" : {
+         "path" : "/:format/gists/:login",
+         "method" : "GET",
+         "required_params" : [
+            "format",
+            "login"
+         ]
+      }
+   },
+   "expected_status" : [ 200 ],
+   "name" : "GitHub",
+   "authority" : "http://github.com/SPORE",
+   "meta" : {
+      "documentation" : "http://develop.github.com/",
+      "module" : "gist"
+   }
+}

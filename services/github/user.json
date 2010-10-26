@@ -1,6 +1,6 @@
 {
    "base_url" : "http://github.com/api/v2/",
-   "version" : "0.2",
+   "version" : "0.3",
    "methods" : {
       "user_search" : {
          "path" : "/:format/user/search/:search",
@@ -10,7 +10,7 @@
             "search"
          ]
       },
-      "user_information" : {
+      "get_info" : {
          "path" : "/:format/user/show/:username",
          "method" : "GET",
          "required_params" : [
@@ -18,7 +18,7 @@
             "username"
          ]
       },
-      "my_information" : {
+      "get_profile" : {
          "path" : "/:format/user/show",
          "method" : "GET",
          "required_params" : [
@@ -49,7 +49,7 @@
          ],
          "authentication" : true
       },
-      "user_following" : {
+      "get_following" : {
          "path" : "/:format/user/show/:user/following",
          "method" : "GET",
          "required_params" : [
@@ -57,7 +57,7 @@
             "user"
          ]
       },
-      "user_followers" : {
+      "get_followers" : {
          "path" : "/:format/user/show/:user/followers",
          "method" : "GET",
          "required_params" : [
@@ -83,7 +83,7 @@
          ],
          "authentication" : true
       },
-      "watched_repos" : {
+      "get_watched_repos" : {
          "path" : "/:format/repos/watched/:user",
          "method" : "GET",
          "required_params" : [
@@ -91,7 +91,7 @@
             "user"
          ]
       },
-      "list_public_keys" : {
+      "get_keys" : {
          "path" : "/:format/user/keys",
          "method" : "GET",
          "required_params" : [
@@ -99,7 +99,7 @@
          ],
          "authentication" : true
       },
-      "add_public_key" : {
+      "add_key" : {
          "path" : "/:format/user/key/add",
          "method" : "POST",
          "form-data" : {
@@ -113,7 +113,7 @@
          ],
          "authentication" : true
       },
-      "del_public_key" : {
+      "remove_key" : {
          "path" : "/:format/user/key/remove",
          "method" : "POST",
          "form-data" : {
@@ -125,7 +125,7 @@
          ],
          "authentication" : true
       },
-      "list_emails" : {
+      "get_emails" : {
          "path" : "/:format/user/emails",
          "method" : "GET",
          "required_params" : [
@@ -145,7 +145,7 @@
          ],
          "authentication" : true
       },
-      "del_email" : {
+      "remove_email" : {
          "path" : "/:format/user/email/remove",
          "method" : "POST",
          "form-data" : {

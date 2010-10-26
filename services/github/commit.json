@@ -1,0 +1,44 @@
+{
+   "base_url" : "http://github.com/api/v2/",
+   "version" : "0.3",
+   "methods" : {
+      "get_commits" : {
+         "path" : "/:format/commits/list/:user/:repo/:branch",
+         "method" : "GET",
+         "required_params" : [
+            "format",
+            "user",
+            "repo",
+            "branch"
+         ]
+      },
+      "get_file_commits" : {
+         "path" : "/:format/commits/list/:user/:repo/:branch/:path",
+         "method" : "GET",
+         "required_params" : [
+            "format",
+            "user",
+            "repo",
+            "branch",
+            "path"
+         ]
+      },
+      "get_commit_info" : {
+         "path" : "/:format/commits/show/:user/:repo/:sha",
+         "method" : "GET",
+         "required_params" : [
+            "format",
+            "user",
+            "repo",
+            "sha"
+         ]
+      }
+   },
+   "expected_status" : [ 200 ],
+   "name" : "GitHub",
+   "authority" : "http://github.com/SPORE",
+   "meta" : {
+      "documentation" : "http://develop.github.com/",
+      "module" : "commit"
+   }
+}
