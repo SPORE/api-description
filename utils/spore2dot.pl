@@ -11,7 +11,8 @@ pod2usage(1) unless scalar(@ARGV) > 0;
 
 my @specs;
 foreach (@ARGV) {
-    push @specs, read_from_json($_);
+    my $content < io $_;
+    push @specs, JSON::decode_json($content);
 }
 
 print << 'DOT';
@@ -72,13 +73,6 @@ foreach my $spec (@specs) {
     print "}\"];\n\n";
 }
 print "}\n";
-
-sub read_from_json {
-    my ($fname) = @_;
-
-    my $content < io $fname;
-    return JSON::decode_json($content);
-}
 
 __END__
 
