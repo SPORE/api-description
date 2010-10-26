@@ -67,6 +67,7 @@ foreach my $spec (@specs) {
         print ")";
         print " &otimes;" if $desc->{authentication};
         print "\\l";
+        print "&nbsp;&nbsp;&nbsp;", $desc->{method}, " ", $desc->{path}, "\\l" if $ENV{SPORE_PATH};
     }
     print "}\"];\n\n";
 }
