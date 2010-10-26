@@ -64,7 +64,9 @@ foreach my $spec (@specs) {
             print $_, "\\]";
             $first = 0;
         }
-        print ")\\l";
+        print ")";
+        print " &otimes;" if $desc->{authentication};
+        print "\\l";
     }
     print "}\"];\n\n";
 }
