@@ -33,6 +33,7 @@
    "authority" : "http://github.com/SPORE",
    "meta" : {
       "documentation" : "http://develop.github.com/",
-      "module" : "gist"
+      "module" : "gist",
+      "enable_if" : "get_gist_content"
    }
 }

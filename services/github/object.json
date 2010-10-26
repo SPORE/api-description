@@ -72,6 +72,7 @@
    "authority" : "http://github.com/SPORE",
    "meta" : {
       "documentation" : "http://develop.github.com/",
-      "module" : "object"
+      "module" : "object",
+      "enable_if" : "get_raw_blob"
    }
 }
