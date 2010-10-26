@@ -33,6 +33,7 @@ if ($has_interface) {
 
 }
 
+my %meth;
 foreach my $spec (@specs) {
     my $name = $spec->{meta}->{module} || $spec->{name};
     print "    \"", $name, "\"\n";
@@ -40,6 +41,8 @@ foreach my $spec (@specs) {
     print "&laquo;interface&raquo;\\n" if ($has_interface);
     print "\\N|";
     for my $name (sort keys %{$spec->{methods}}) {
+        die "duplicated $name" if exists $meth{$name};
+        $meth{$name} = 1;
         my $desc = $spec->{methods}->{$name};
         print $name, "(";
         my $first = 1;
