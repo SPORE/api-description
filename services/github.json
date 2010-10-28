@@ -360,6 +360,10 @@
             "user",
             "repo",
             "nethash"
+         ],
+         "optional_params" : [
+            "start",
+            "end"
          ]
       },
 
