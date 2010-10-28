@@ -1,0 +1,155 @@
+{
+   "version" : "0.1",
+   "methods" : {
+      "insert_document" : {
+         "path" : "/:db",
+         "method" : "POST",
+         "required_params" : [
+            "db"
+         ],
+         "required_payload" : true,
+         "expected_status" : [ 201, 409 ]
+      },
+      "get_document" : {
+         "path" : "/:db/:id",
+         "method" : "GET",
+         "required_params" : [
+            "db",
+            "id"
+         ],
+         "optional_params" : [
+            "rev",
+            "revs"
+         ]
+      },
+      "add_document" : {
+         "path" : "/:db/:id",
+         "method" : "PUT",
+         "required_params" : [
+            "db",
+            "id"
+         ],
+         "required_payload" : true,
+         "expected_status" : [ 201, 409 ]
+      },
+      "delete_document" : {
+         "path" : "/:db/:id",
+         "method" : "DELETE",
+         "required_params" : [
+            "db",
+            "id",
+            "rev"
+         ],
+         "expected_status" : [ 200, 409 ]
+      },
+      "copy_document" : {
+         "path" : "/:db/:id",
+         "method" : "COPY",
+         "headers" : {
+            "Destination" : ":dest"
+         },
+         "required_params" : [
+            "db",
+            "id",
+            "dest"
+         ],
+         "optional_params" : [
+            "rev"
+         ],
+         "expected_status" : [ 201 ]
+      },
+      "get_attachment" : {
+         "path" : "/:db/:id/:file",
+         "method" : "GET",
+         "required_params" : [
+            "db",
+            "id",
+            "file"
+         ]
+      },
+      "add_attachment" : {
+         "path" : "/:db/:id/:file",
+         "method" : "PUT",
+         "headers" : {
+            "Content-Type" : ":content_type"
+         },
+         "required_params" : [
+            "db",
+            "id",
+            "rev",
+            "file",
+            "content_type"
+         ],
+         "required_payload" : true,
+         "expected_status" : [ 201, 409 ]
+      },
+      "delete_attachment" : {
+         "path" : "/:db/:id/:file",
+         "method" : "DELETE",
+         "required_params" : [
+            "db",
+            "id",
+            "file"
+         ]
+      },
+      "get_local_document" : {
+         "path" : "/:db/_local/:id",
+         "method" : "GET",
+         "required_params" : [
+            "db",
+            "id"
+         ],
+         "optional_params" : [
+            "rev",
+            "revs"
+         ]
+      },
+      "add_local_document" : {
+         "path" : "/:db/_local/:id",
+         "method" : "PUT",
+         "required_params" : [
+            "db",
+            "id"
+         ],
+         "required_payload" : true,
+         "expected_status" : [ 201, 409 ]
+      },
+      "delete_local_document" : {
+         "path" : "/:db/_local/:id",
+         "method" : "DELETE",
+         "required_params" : [
+            "db",
+            "id",
+            "rev"
+         ],
+         "expected_status" : [ 200, 409 ]
+      },
+      "copy_local_document" : {
+         "path" : "/:db/_local/:id",
+         "method" : "COPY",
+         "headers" : {
+            "Destination" : ":dest"
+         },
+         "required_params" : [
+            "db",
+            "id",
+            "dest"
+         ],
+         "optional_params" : [
+            "rev"
+         ],
+         "expected_status" : [ 201 ]
+      }
+   },
+   "formats" : [
+      "json"
+   ],
+   "expected_status" : [ 200, 404 ],
+   "name" : "CouchDB",
+   "authority" : "http://github.com/SPORE",
+   "meta" : {
+      "documentation" : "http://wiki.apache.org/couchdb/Complete_HTTP_API_Reference",
+      "module" : "document",
+      "enable_if" : "get_attachment"
+   }
+}

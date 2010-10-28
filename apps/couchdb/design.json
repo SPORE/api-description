@@ -1,0 +1,142 @@
+{
+   "version" : "0.1",
+   "methods" : {
+      "get_design" : {
+         "path" : "/:db/_design/:design",
+         "method" : "GET",
+         "required_params" : [
+            "db",
+            "design"
+         ],
+         "optional_params" : [
+            "rev",
+            "revs"
+         ]
+      },
+      "add_design" : {
+         "path" : "/:db/_design/:design",
+         "method" : "PUT",
+         "required_params" : [
+            "db",
+            "design"
+         ],
+         "required_payload" : true,
+         "expected_status" : [ 201, 409 ]
+      },
+      "delete_design" : {
+         "path" : "/:db/_design/:design",
+         "method" : "DELETE",
+         "required_params" : [
+            "db",
+            "design",
+            "rev"
+         ]
+      },
+      "copy_design" : {
+         "path" : "/:db/_design/:design",
+         "method" : "COPY",
+         "headers" : {
+            "Destination" : ":dest"
+         },
+         "required_params" : [
+            "db",
+            "design",
+            "dest"
+         ],
+         "optional_params" : [
+            "rev"
+         ],
+         "expected_status" : [ 201 ]
+      },
+      "get_design_attachment" : {
+         "path" : "/:db/_design/:design/:file",
+         "method" : "GET",
+         "required_params" : [
+            "db",
+            "design",
+            "file"
+         ]
+      },
+      "add_design_attachment" : {
+         "path" : "/:db/_design/:design/:file",
+         "method" : "PUT",
+         "required_params" : [
+            "db",
+            "design",
+            "file"
+         ],
+         "required_payload" : true,
+         "expected_status" : [ 201, 409 ]
+      },
+      "delete_design_attachment" : {
+         "path" : "/:db/_design/:design/:file",
+         "method" : "DELETE",
+         "required_params" : [
+            "db",
+            "design",
+            "file"
+         ],
+         "expected_status" : [ 200, 409 ]
+      },
+      "get_design_info" : {
+         "path" : "/:db/_design/:design/_info",
+         "method" : "GET",
+         "required_params" : [
+            "db",
+            "design"
+         ]
+      },
+      "get_view" : {
+         "path" : "/:db/_design/:design/_view/:view",
+         "method" : "GET",
+         "required_params" : [
+            "db",
+            "design",
+            "view"
+         ]
+      },
+      "get_show_without_doc" : {
+         "path" : "/:db/_design/:design/_show/:show",
+         "method" : "GET",
+         "required_params" : [
+            "db",
+            "design",
+            "show"
+         ],
+         "unattended_params" : true
+      },
+      "get_show" : {
+         "path" : "/:db/_design/:design/_show/:show/:id",
+         "method" : "GET",
+         "required_params" : [
+            "db",
+            "design",
+            "show",
+            "id"
+         ],
+         "unattended_params" : true
+      },
+      "get_list" : {
+         "path" : "/:db/_design/:design/_list/:list/:view",
+         "method" : "GET",
+         "required_params" : [
+            "db",
+            "design",
+            "list",
+            "view"
+         ],
+         "unattended_params" : true
+      }
+   },
+   "expected_status" : [ 200, 404 ],
+   "formats" : [
+      "json"
+   ],
+   "name" : "CouchDB",
+   "authority" : "http://github.com/SPORE",
+   "meta" : {
+      "documentation" : "http://wiki.apache.org/couchdb/Complete_HTTP_API_Reference",
+      "module" : "design",
+      "enable_if" : "get_design_attachment"
+   }
+}

@@ -1,0 +1,147 @@
+{
+   "version" : "0.1",
+   "methods" : {
+      "get_info" : {
+         "path" : "/:db",
+         "method" : "GET",
+         "required_params" : [
+            "db"
+         ]
+      },
+      "create_db" : {
+         "path" : "/:db",
+         "method" : "PUT",
+         "required_params" : [
+            "db"
+         ],
+         "expected_status" : [ 201, 412 ]
+      },
+      "delete_db" : {
+         "path" : "/:db",
+         "method" : "DELETE",
+         "required_params" : [
+            "db"
+         ],
+         "expected_status" : [ 200, 404 ]
+      },
+      "get_changes" : {
+         "path" : "/:db/_changes",
+         "method" : "GET",
+         "required_params" : [
+            "db"
+         ],
+         "optional_params" : [
+            "feed",
+            "filter",
+            "heartbeat",
+            "since",
+            "style"
+         ],
+         "unattended_params" : true
+      },
+      "compact" : {
+         "path" : "/:db/_compact",
+         "method" : "POST",
+         "required_params" : [
+            "db"
+         ],
+         "expected_status" : [ 202 ]
+      },
+      "compact_design" : {
+         "path" : "/:db/_compact/design-doc",
+         "method" : "POST",
+         "required_params" : [
+            "db"
+         ],
+         "expected_status" : [ 202 ]
+      },
+      "clean_view" : {
+         "path" : "/:db/_view_cleanup",
+         "method" : "POST",
+         "required_params" : [
+            "db"
+         ]
+      },
+      "execute_view" : {
+         "path" : "/:db/_temp_view",
+         "method" : "POST",
+         "required_params" : [
+            "db"
+         ]
+      },
+      "ensure_full_commit" : {
+         "path" : "/:db/_ensure_full_commit",
+         "method" : "POST",
+         "required_params" : [
+            "db"
+         ]
+      },
+      "bulk_docs" : {
+         "path" : "/:db/_bulk_docs",
+         "method" : "POST",
+         "required_params" : [
+            "db"
+         ]
+      },
+      "purge" : {
+         "path" : "/:db/_purge",
+         "method" : "POST",
+         "required_params" : [
+            "db"
+         ]
+      },
+      "get_all_docs" : {
+         "path" : "/:db/_all_docs",
+         "method" : "GET",
+         "required_params" : [
+            "db"
+         ],
+         "optional_params" : [
+            "descending",
+            "startkey",
+            "endkey",
+            "limit"
+         ]
+      },
+      "get_security" : {
+         "path" : "/:db/_security",
+         "method" : "GET",
+         "required_params" : [
+            "db"
+         ]
+      },
+      "set_security" : {
+         "path" : "/:db/_security",
+         "method" : "PUT",
+         "required_params" : [
+            "db"
+         ],
+         "required_payload" : true
+      },
+      "get_revs_limit" : {
+         "path" : "/:db/_revs_limit",
+         "method" : "GET",
+         "required_params" : [
+            "db"
+         ]
+      },
+      "set_revs_limit" : {
+         "path" : "/:db/_revs_limit",
+         "method" : "PUT",
+         "required_params" : [
+            "db"
+         ],
+         "required_payload" : true
+      }
+   },
+   "formats" : [
+      "json"
+   ],
+   "expected_status" : [ 200 ],
+   "name" : "CouchDB",
+   "authority" : "http://github.com/SPORE",
+   "meta" : {
+      "documentation" : "http://wiki.apache.org/couchdb/Complete_HTTP_API_Reference",
+      "module" : "database"
+   }
+}
