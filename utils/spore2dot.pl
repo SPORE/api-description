@@ -65,10 +65,30 @@ foreach my $spec (@specs) {
             print $_, "\\]";
             $first = 0;
         }
+        if ($desc->{optional_payload}) {
+            print "\\[";
+            print ", " unless $first;
+            print "payload\\]";
+            $first = 0;
+        }
+        if ($desc->{unattended_params} || $spec->{unattended_params}) {
+            print ", " unless $first;
+            print "...";
+        }
         print ")";
         print " &otimes;" if $desc->{authentication} || $spec->{authentication};
         print "\\l";
-        print "&nbsp;&nbsp;&nbsp;", $desc->{method}, " ", $desc->{path}, "\\l" if $ENV{SPORE_PATH};
+        if ($ENV{SPORE_DETAILS}) {
+            print "&nbsp;&nbsp;&nbsp;", $desc->{method}, " ", $desc->{path}, "\\l";
+            for my $h (sort keys %{$desc->{headers}}) {
+                print "&nbsp;&nbsp;&nbsp;", $h, ": ", $desc->{headers}->{$h}, "\\l";
+            }
+            for my $f (sort keys %{$desc->{'form-data'}}) {
+                print "&nbsp;&nbsp;&nbsp;form-data \\\"", $f, "\\\" ", $desc->{'form-data'}->{$f}, "\\l";
+            }
+            my $status = $desc->{expected_status} || $spec->{expected_status};
+            print "&nbsp;&nbsp;&nbsp;", join(', ', @{$status}), "\\l" if $status;
+        }
     }
     print "}\"];\n\n";
 }
