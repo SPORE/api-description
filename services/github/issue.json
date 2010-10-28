@@ -1,6 +1,6 @@
 {
    "base_url" : "http://github.com/api/v2/",
-   "version" : "0.3",
+   "version" : "0.4",
    "methods" : {
       "issue_search" : {
          "path" : "/:format/issues/search/:user/:repo/:state/:search_term",
@@ -13,7 +13,7 @@
             "search_term"
          ]
       },
-      "get_issues" : {
+      "list_issues" : {
          "path" : "/:format/issues/list/:user/:repo/:state",
          "method" : "GET",
          "required_params" : [
@@ -23,7 +23,7 @@
             "state"
          ]
       },
-      "get_issues_by_label" : {
+      "list_issues_by_label" : {
          "path" : "/:format/issues/list/:user/:repo/label/:label",
          "method" : "GET",
          "required_params" : [
@@ -43,7 +43,7 @@
             "number"
          ]
       },
-      "get_comments" : {
+      "list_comments" : {
          "path" : "/:format/issues/comments/:user/:repo/:number",
          "method" : "GET",
          "required_params" : [
@@ -112,7 +112,7 @@
          ],
          "authentication" : true
       },
-      "get_labels" : {
+      "list_labels" : {
          "path" : "/:format/issues/labels/:user/:repo",
          "method" : "GET",
          "required_params" : [

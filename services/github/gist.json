@@ -1,6 +1,6 @@
 {
    "base_url" : "http://gist.github.com/api/v1/",
-   "version" : "0.3",
+   "version" : "0.4",
    "methods" : {
       "get_gist_info" : {
          "path" : "/:format/:gist_id",
@@ -19,7 +19,7 @@
             "filename"
          ]
       },
-      "get_gists" : {
+      "list_gists" : {
          "path" : "/:format/gists/:login",
          "method" : "GET",
          "required_params" : [

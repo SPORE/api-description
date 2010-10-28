@@ -1,6 +1,6 @@
 {
    "base_url" : "http://github.com/api/v2/",
-   "version" : "0.3",
+   "version" : "0.4",
    "methods" : {
       "repo_search" : {
          "path" : "/:format/repos/search/:q",
@@ -47,7 +47,7 @@
          ],
          "authentication" : true
       },
-      "get_repos" : {
+      "list_repos" : {
          "path" : "/:format/repos/show/:user",
          "method" : "GET",
          "required_params" : [
@@ -135,7 +135,7 @@
          ],
          "authentication" : true
       },
-      "get_repo_keys" : {
+      "list_repo_keys" : {
          "path" : "/:format/repos/keys/:user/:repo",
          "method" : "GET",
          "required_params" : [
@@ -175,7 +175,7 @@
          ],
          "authentication" : true
       },
-      "get_collaborators" : {
+      "list_collaborators" : {
          "path" : "/:format/repos/show/:user/:repo/collaborators",
          "method" : "GET",
          "required_params" : [
@@ -207,7 +207,7 @@
          ],
          "authentication" : true
       },
-      "get_pushable" : {
+      "list_pushable" : {
          "path" : "/:format/repos/pushable",
          "method" : "GET",
          "required_params" : [
@@ -215,7 +215,7 @@
          ],
          "authentication" : true
       },
-      "get_contributors" : {
+      "list_contributors" : {
          "path" : "/:format/repos/show/:user/:repo/contributors",
          "method" : "GET",
          "required_params" : [
@@ -224,7 +224,7 @@
             "repo"
          ]
       },
-      "get_anon_contributors" : {
+      "list_anon_contributors" : {
          "path" : "/:format/repos/show/:user/:repo/contributors/anon",
          "method" : "GET",
          "required_params" : [
@@ -233,7 +233,7 @@
             "repo"
          ]
       },
-      "get_watchers" : {
+      "list_watchers" : {
          "path" : "/:format/repos/show/:user/:repo/watchers",
          "method" : "GET",
          "required_params" : [
@@ -242,7 +242,7 @@
             "repo"
          ]
       },
-      "get_network" : {
+      "list_network" : {
          "path" : "/:format/repos/show/:user/:repo/network",
          "method" : "GET",
          "required_params" : [
@@ -251,7 +251,7 @@
             "repo"
          ]
       },
-      "get_languages" : {
+      "list_languages" : {
          "path" : "/:format/repos/show/:user/:repo/languages",
          "method" : "GET",
          "required_params" : [
@@ -260,7 +260,7 @@
             "repo"
          ]
       },
-      "get_tags" : {
+      "list_tags" : {
          "path" : "/:format/repos/show/:user/:repo/tags",
          "method" : "GET",
          "required_params" : [
@@ -269,7 +269,7 @@
             "repo"
          ]
       },
-      "get_branches" : {
+      "list_branches" : {
          "path" : "/:format/repos/show/:user/:repo/branches",
          "method" : "GET",
          "required_params" : [

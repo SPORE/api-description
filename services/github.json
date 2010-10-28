@@ -1,6 +1,6 @@
 {
    "base_url" : "http://github.com/api/v2/",
-   "version" : "0.3",
+   "version" : "0.4",
    "methods" : {
       "user_search" : {
          "path" : "/:format/user/search/:search",
@@ -49,7 +49,7 @@
          ],
          "authentication" : true
       },
-      "get_following" : {
+      "list_following" : {
          "path" : "/:format/user/show/:user/following",
          "method" : "GET",
          "required_params" : [
@@ -57,7 +57,7 @@
             "user"
          ]
       },
-      "get_followers" : {
+      "list_followers" : {
          "path" : "/:format/user/show/:user/followers",
          "method" : "GET",
          "required_params" : [
@@ -83,7 +83,7 @@
          ],
          "authentication" : true
       },
-      "get_watched_repos" : {
+      "list_watched_repos" : {
          "path" : "/:format/repos/watched/:user",
          "method" : "GET",
          "required_params" : [
@@ -91,7 +91,7 @@
             "user"
          ]
       },
-      "get_keys" : {
+      "list_keys" : {
          "path" : "/:format/user/keys",
          "method" : "GET",
          "required_params" : [
@@ -125,7 +125,7 @@
          ],
          "authentication" : true
       },
-      "get_emails" : {
+      "list_emails" : {
          "path" : "/:format/user/emails",
          "method" : "GET",
          "required_params" : [
@@ -169,7 +169,7 @@
             "search_term"
          ]
       },
-      "get_issues" : {
+      "list_issues" : {
          "path" : "/:format/issues/list/:user/:repo/:state",
          "method" : "GET",
          "required_params" : [
@@ -179,7 +179,7 @@
             "state"
          ]
       },
-      "get_issues_by_label" : {
+      "list_issues_by_label" : {
          "path" : "/:format/issues/list/:user/:repo/label/:label",
          "method" : "GET",
          "required_params" : [
@@ -199,7 +199,7 @@
             "number"
          ]
       },
-      "get_comments" : {
+      "list_comments" : {
          "path" : "/:format/issues/comments/:user/:repo/:number",
          "method" : "GET",
          "required_params" : [
@@ -268,7 +268,7 @@
          ],
          "authentication" : true
       },
-      "get_labels" : {
+      "list_labels" : {
          "path" : "/:format/issues/labels/:user/:repo",
          "method" : "GET",
          "required_params" : [
@@ -335,7 +335,7 @@
             "filename"
          ]
       },
-      "get_gists" : {
+      "list_gists" : {
          "base_url" : "http://gist.github.com/api/v1/",
          "path" : "/:format/gists/:login",
          "method" : "GET",
@@ -353,7 +353,7 @@
             "repo"
          ]
       },
-      "get_network_data" : {
+      "list_network_data" : {
          "path" : "/:user/:repo/network_data_chunk",
          "method" : "GET",
          "required_params" : [
@@ -412,7 +412,7 @@
          ],
          "authentication" : true
       },
-      "get_repos" : {
+      "list_repos" : {
          "path" : "/:format/repos/show/:user",
          "method" : "GET",
          "required_params" : [
@@ -500,7 +500,7 @@
          ],
          "authentication" : true
       },
-      "get_repo_keys" : {
+      "list_repo_keys" : {
          "path" : "/:format/repos/keys/:user/:repo",
          "method" : "GET",
          "required_params" : [
@@ -540,7 +540,7 @@
          ],
          "authentication" : true
       },
-      "get_collaborators" : {
+      "list_collaborators" : {
          "path" : "/:format/repos/show/:user/:repo/collaborators",
          "method" : "GET",
          "required_params" : [
@@ -572,7 +572,7 @@
          ],
          "authentication" : true
       },
-      "get_pushable" : {
+      "list_pushable" : {
          "path" : "/:format/repos/pushable",
          "method" : "GET",
          "required_params" : [
@@ -580,7 +580,7 @@
          ],
          "authentication" : true
       },
-      "get_contributors" : {
+      "list_contributors" : {
          "path" : "/:format/repos/show/:user/:repo/contributors",
          "method" : "GET",
          "required_params" : [
@@ -589,7 +589,7 @@
             "repo"
          ]
       },
-      "get_anon_contributors" : {
+      "list_anon_contributors" : {
          "path" : "/:format/repos/show/:user/:repo/contributors/anon",
          "method" : "GET",
          "required_params" : [
@@ -598,7 +598,7 @@
             "repo"
          ]
       },
-      "get_watchers" : {
+      "list_watchers" : {
          "path" : "/:format/repos/show/:user/:repo/watchers",
          "method" : "GET",
          "required_params" : [
@@ -607,7 +607,7 @@
             "repo"
          ]
       },
-      "get_network" : {
+      "list_network" : {
          "path" : "/:format/repos/show/:user/:repo/network",
          "method" : "GET",
          "required_params" : [
@@ -616,7 +616,7 @@
             "repo"
          ]
       },
-      "get_languages" : {
+      "list_languages" : {
          "path" : "/:format/repos/show/:user/:repo/languages",
          "method" : "GET",
          "required_params" : [
@@ -625,7 +625,7 @@
             "repo"
          ]
       },
-      "get_tags" : {
+      "list_tags" : {
          "path" : "/:format/repos/show/:user/:repo/tags",
          "method" : "GET",
          "required_params" : [
@@ -634,7 +634,7 @@
             "repo"
          ]
       },
-      "get_branches" : {
+      "list_branches" : {
          "path" : "/:format/repos/show/:user/:repo/branches",
          "method" : "GET",
          "required_params" : [
@@ -644,7 +644,7 @@
          ]
       },
 
-      "get_commits" : {
+      "list_commits" : {
          "path" : "/:format/commits/list/:user/:repo/:branch",
          "method" : "GET",
          "required_params" : [
@@ -654,7 +654,7 @@
             "branch"
          ]
       },
-      "get_file_commits" : {
+      "list_file_commits" : {
          "path" : "/:format/commits/list/:user/:repo/:branch/:path",
          "method" : "GET",
          "required_params" : [
@@ -676,7 +676,7 @@
          ]
       },
 
-      "get_tree" : {
+      "list_tree" : {
          "path" : "/:format/tree/show/:user/:repo/:tree_sha",
          "method" : "GET",
          "required_params" : [
@@ -700,7 +700,7 @@
             "meta"
          ]
       },
-      "get_blobs" : {
+      "list_blobs" : {
          "path" : "/:format/blob/all/:user/:repo/:tree_sha",
          "method" : "GET",
          "required_params" : [
@@ -710,7 +710,7 @@
             "sha"
          ]
       },
-      "get_full_blobs" : {
+      "list_full_blobs" : {
          "path" : "/:format/blob/full/:user/:repo/:tree_sha",
          "method" : "GET",
          "required_params" : [
@@ -720,7 +720,7 @@
             "tree_sha"
          ]
       },
-      "get_full_tree" : {
+      "list_full_tree" : {
          "path" : "/:format/tree/full/:user/:repo/:tree_sha",
          "method" : "GET",
          "required_params" : [
