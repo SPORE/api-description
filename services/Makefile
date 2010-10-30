@@ -7,6 +7,7 @@ check: spore_validation.rx
 	@$(VALIDATOR) backtype.json
 	@$(VALIDATOR) github.json
 	@$(VALIDATOR) ihackernews.json
+	@$(VALIDATOR) ohloh.json
 	@$(VALIDATOR) twitter.json
 
 test: check
@@ -19,6 +20,7 @@ png: \
     backtype.png \
     github.png \
     ihackernews.png \
+    ohloh.png \
     twitter.png
 	@make -C github png
 

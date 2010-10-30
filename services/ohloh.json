@@ -1,0 +1,292 @@
+{
+   "name" : "Ohloh",
+   "version" : "0.1",
+   "base_url" : "http://www.ohloh.net",
+   "methods" : {
+      "get_account" : {
+         "path" : "/accounts/:account_id.xml",
+         "method" : "GET",
+         "required_params" : [
+            "api_key",
+            "account_id"
+         ]
+      },
+      "list_accounts" : {
+         "path" : "/accounts.xml",
+         "method" : "GET",
+         "required_params" : [
+            "api_key"
+         ],
+         "optional_params" : [
+            "query",
+            "sort",
+            "page"
+         ]
+      },
+
+      "list_activity_facts" : {
+         "path" : "/projects/:project_id/analyses/:analysis_id/activity_facts.xml",
+         "method" : "GET",
+         "required_params" : [
+            "api_key",
+            "project_id",
+            "analysis_id"
+         ]
+      },
+      "list_latest_activity_facts" : {
+         "path" : "/projects/:project_id/analyses/latest/activity_facts.xml",
+         "method" : "GET",
+         "required_params" : [
+            "api_key",
+            "project_id"
+         ]
+      },
+
+      "get_analysis" : {
+         "path" : "/projects/:project_id/analyses/:analysis_id.xml",
+         "method" : "GET",
+         "required_params" : [
+            "api_key",
+            "project_id",
+            "analysis_id"
+         ]
+      },
+      "get_latest_analysis" : {
+         "path" : "/projects/:project_id/analyses/latest.xml",
+         "method" : "GET",
+         "required_params" : [
+            "api_key",
+            "project_id"
+         ]
+      },
+
+      "get_contributor_fact" : {
+         "path" : "/projects/:project_id/contributors/:contributor_id.xml",
+         "method" : "GET",
+         "required_params" : [
+            "api_key",
+            "project_id",
+            "contributor_id"
+         ]
+      },
+      "list_contributor_facts" : {
+         "path" : "/projects/:project_id/contributors.xml",
+         "method" : "GET",
+         "required_params" : [
+            "api_key",
+            "project_id"
+         ]
+      },
+
+      "list_contributor_language_facts" : {
+         "path" : "/projects/:project_id/contributors/:contributor_id.xml",
+         "method" : "GET",
+         "required_params" : [
+            "api_key",
+            "project_id",
+            "contributor_id"
+         ]
+      },
+
+      "get_enlistment" : {
+         "path" : "projects/:project_id/enlistment/:enlistment_id.xml",
+         "method" : "GET",
+         "required_params" : [
+            "api_key",
+            "project_id",
+            "enlistment_id"
+         ]
+      },
+      "list_enlistments" : {
+         "path" : "projects/:project_id/enlistments.xml",
+         "method" : "GET",
+         "required_params" : [
+            "api_key",
+            "project_id"
+         ],
+         "optional_params" : [
+            "query",
+            "sort",
+            "page"
+         ]
+      },
+
+      "get_factoid" : {
+         "path" : "projects/:project_id/factoids/:factoid_id.xml",
+         "method" : "GET",
+         "required_params" : [
+            "api_key",
+            "project_id",
+            "factoid_id"
+         ]
+      },
+      "list_factoids" : {
+         "path" : "projects/:project_id/factoids.xml",
+         "method" : "GET",
+         "required_params" : [
+            "api_key",
+            "project_id"
+         ]
+      },
+
+      "list_kudos" : {
+         "path" : "/accounts/:account_id/kudos.xml",
+         "method" : "GET",
+         "required_params" : [
+            "api_key",
+            "account_id"
+         ]
+      },
+      "list_kudos_sent" : {
+         "path" : "/accounts/:account_id/kudos/sent.xml",
+         "method" : "GET",
+         "required_params" : [
+            "api_key",
+            "account_id"
+         ]
+      },
+
+      "get_language" : {
+         "path" : "/languages/:language_id.xml",
+         "method" : "GET",
+         "required_params" : [
+            "api_key",
+            "language_id"
+         ]
+      },
+      "list_languages" : {
+         "path" : "/languages.xml",
+         "method" : "GET",
+         "required_params" : [
+            "api_key"
+         ],
+         "optional_params" : [
+            "query",
+            "sort",
+            "page"
+         ]
+      },
+
+      "get_message" : {
+         "path" : "/accounts/{account_id}/messages/{message_id}.xml",
+         "method" : "GET",
+         "required_params" : [
+            "api_key",
+            "account_id",
+            "message_id"
+         ]
+      },
+      "list_messages_by_account" : {
+         "path" : "/accounts/:account_id/messages.xml",
+         "method" : "GET",
+         "required_params" : [
+            "api_key",
+            "account_id"
+         ]
+      },
+      "list_messages_by_project" : {
+         "path" : "/projects/:project_id/messages.xml",
+         "method" : "GET",
+         "required_params" : [
+            "api_key",
+            "project_id"
+         ]
+      },
+      "create_message" : {
+         "path" : "/accounts/me/messages.xml",
+         "method" : "POST",
+         "form-data" : {
+            "message[body]" : ":body"
+         },
+         "required_params" : [
+            "body"
+         ],
+         "authentication" : true
+      },
+
+      "list_news" : {
+         "path" : "/accounts/:account_id/news.xml",
+         "method" : "GET",
+         "required_params" : [
+            "api_key",
+            "account_id"
+         ]
+      },
+
+      "get_project" : {
+         "path" : "/projects/:project_id.xml",
+         "method" : "GET",
+         "required_params" : [
+            "api_key",
+            "project_id"
+         ]
+      },
+      "list_projects" : {
+         "path" : "/projects.xml",
+         "method" : "GET",
+         "required_params" : [
+            "api_key"
+         ],
+         "optional_params" : [
+            "query",
+            "sort",
+            "page"
+         ]
+      },
+
+      "list_size_facts" : {
+         "path" : "/projects/:project_id/analyses/:analysis_id/size_facts.xml",
+         "method" : "GET",
+         "required_params" : [
+            "api_key",
+            "project_id",
+            "analysis_id"
+         ]
+      },
+      "list_latest_size_facts" : {
+         "path" : "/projects/:project_id/analyses/latest/size_facts.xml",
+         "method" : "GET",
+         "required_params" : [
+            "api_key",
+            "project_id"
+         ]
+      },
+
+      "get_stack" : {
+         "path" : "/accounts/:account_id/stacks/:stack_id.xml",
+         "method" : "GET",
+         "required_params" : [
+            "api_key",
+            "account_id",
+            "stack_id"
+         ]
+      },
+      "get_default_stack" : {
+         "path" : "/accounts/:account_id/stacks/default.xml",
+         "method" : "GET",
+         "required_params" : [
+            "api_key",
+            "account_id"
+         ]
+      },
+      "list_stacks" : {
+         "path" : "/projects/:project_id/stacks.xml",
+         "method" : "GET",
+         "required_params" : [
+            "api_key",
+            "project_id"
+         ],
+         "optional_params" : [
+            "query",
+            "sort",
+            "page"
+         ]
+      }
+   },
+   "expected_status" : [ 200, 400 ],
+   "formats" : [ "xml" ],
+   "authority" : "http://github.com/SPORE",
+   "meta" : {
+      "documentation" : "http://www.ohloh.net/api/getting_started"
+   }
+}
