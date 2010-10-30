@@ -168,7 +168,7 @@
       },
 
       "get_message" : {
-         "path" : "/accounts/{account_id}/messages/{message_id}.xml",
+         "path" : "/accounts/:account_id/messages/:message_id.xml",
          "method" : "GET",
          "required_params" : [
             "api_key",
