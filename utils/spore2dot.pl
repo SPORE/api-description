@@ -77,6 +77,7 @@ foreach my $spec (@specs) {
         }
         print ")";
         print " &otimes;" if $desc->{authentication} || $spec->{authentication};
+        print " DEPRECATED" if $desc->{deprecated};
         print "\\l";
         if ($ENV{SPORE_DETAILS}) {
             print "&nbsp;&nbsp;&nbsp;", $desc->{method}, " ", $desc->{path}, "\\l";
@@ -91,6 +92,16 @@ foreach my $spec (@specs) {
         }
     }
     print "}\"];\n\n";
+
+    my $note = $spec->{description} || $spec->{meta}->{documentation};
+    if ($note && $ENV{SPORE_NOTES}) {
+        $note =~ s/\n/\\n/g;
+        print "    \"__note__", $name, "\"\n";
+        print "        [label=\"", $note, "\" shape=note];\n\n";
+
+        print "    \"", $name, "\" -> \"__note__", $name, "\"\n";
+        print "        [arrowhead = none, arrowtail = none, style = dashed];\n\n";
+    }
 }
 print "}\n";
 
