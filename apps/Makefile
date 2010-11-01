@@ -3,6 +3,7 @@ VALIDATOR := perl ../utils/validator.pl --schema spore_validation.rx --descripti
 SPORE2DOT := perl ../utils/spore2dot.pl
 
 check: spore_validation.rx
+	@make -C couchdb check
 	@$(VALIDATOR) couchdb.json
 	@$(VALIDATOR) presque.json
 
@@ -14,6 +15,7 @@ spore_validation.rx:
 png: \
     couchdb.png \
     presque.png
+	@make -C couchdb png
 
 %.png : %.dot
 	dot -T png -o $@ $<
@@ -22,4 +24,5 @@ png: \
 	$(SPORE2DOT) $< > $@
 
 clean:
+	@make -C couchdb clean
 	-rm *.png *.dot spore_validation.rx
