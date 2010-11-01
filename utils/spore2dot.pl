@@ -93,13 +93,22 @@ foreach my $spec (@specs) {
     }
     print "}\"];\n\n";
 
-    my $note = $spec->{description} || $spec->{meta}->{documentation};
+    my $note = $spec->{description};
     if ($note && $ENV{SPORE_NOTES}) {
         $note =~ s/\n/\\n/g;
         print "    \"__note__", $name, "\"\n";
         print "        [label=\"", $note, "\" shape=note];\n\n";
 
         print "    \"", $name, "\" -> \"__note__", $name, "\"\n";
+        print "        [arrowhead = none, arrowtail = none, style = dashed];\n\n";
+    }
+    my $doc = $spec->{meta}->{documentation};
+    if ($doc && $ENV{SPORE_NOTES}) {
+        $doc =~ s/\n/\\n/g;
+        print "    \"__doc__", $name, "\"\n";
+        print "        [label=\"", $doc, "\" shape=note];\n\n";
+
+        print "    \"", $name, "\" -> \"__doc__", $name, "\"\n";
         print "        [arrowhead = none, arrowtail = none, style = dashed];\n\n";
     }
 }
