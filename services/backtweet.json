@@ -10,18 +10,20 @@
          ],
          "required_params" : [
             "q",
-            "key"
+            "key",
+            "format"
          ],
          "expected_status" : [
             "200"
          ],
-         "path" : "/tweets/search/links",
+         "path" : "/tweets/search/links.:format",
          "method" : "GET"
       },
       "stats_by_url" : {
          "required_params" : [
             "q",
-            "key"
+            "key",
+            "format"
          ],
          "optional_params" : [
             "batch"
@@ -29,18 +31,19 @@
          "expected_status" : [
             "200"
          ],
-         "path" : "/tweetcount",
+         "path" : "/tweetcount.:format",
          "method" : "GET"
       },
       "good_tweets_by_url" : {
          "required_params" : [
             "q",
-            "key"
+            "key",
+            "format"
          ],
          "expected_status" : [
             "200"
          ],
-         "path" : "/goodtweets",
+         "path" : "/goodtweets.:format",
          "method" : "GET"
       }
    },
