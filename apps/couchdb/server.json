@@ -1,0 +1,86 @@
+{
+   "version" : "0.1",
+   "methods" : {
+      "get_root" : {
+         "path" : "/",
+         "method" : "GET"
+      },
+      "get_all_dbs" : {
+         "path" : "/_all_dbs",
+         "method" : "GET"
+      },
+      "get_active_tasks" : {
+         "path" : "/_active_tasks",
+         "method" : "GET"
+      },
+      "replicate" : {
+         "path" : "/_replicate",
+         "method" : "POST",
+         "required_payload" : true
+      },
+      "get_uuids" : {
+         "path" : "/_uuids",
+         "method" : "GET",
+         "optional_params" : [
+            "count"
+         ]
+      },
+      "restart" : {
+         "path" : "/_restart",
+         "method" : "POST"
+      },
+      "get_stats" : {
+         "path" : "/_stats",
+         "method" : "GET"
+      },
+      "get_log" : {
+         "path" : "/_log",
+         "method" : "GET"
+      },
+      "get_config" : {
+         "path" : "/_config",
+         "method" : "GET"
+      },
+      "get_config_section" : {
+         "path" : "/_config/:section",
+         "method" : "GET",
+         "required_params" : [
+            "section"
+         ]
+      },
+      "get_config_item" : {
+         "path" : "/_config/:section/:key",
+         "method" : "GET",
+         "required_params" : [
+            "section",
+            "key"
+         ]
+      },
+      "set_config_item" : {
+         "path" : "/_config/:section/:key",
+         "method" : "PUT",
+         "required_params" : [
+            "section",
+            "key"
+         ]
+      },
+      "delete_config_item" : {
+         "path" : "/_config/:section/:key",
+         "method" : "DELETE",
+         "required_params" : [
+            "section",
+            "key"
+         ]
+      }
+   },
+   "formats" : [
+      "json"
+   ],
+   "expected_status" : [ 200 ],
+   "name" : "CouchDB",
+   "authority" : "http://github.com/SPORE",
+   "meta" : {
+      "documentation" : "http://wiki.apache.org/couchdb/Complete_HTTP_API_Reference",
+      "module" : "server"
+   }
+}

@@ -1,6 +1,6 @@
 {
    "base_url" : "http://github.com/api/v2/",
-   "version" : "0.3",
+   "version" : "0.4",
    "methods" : {
       "user_search" : {
          "path" : "/:format/user/search/:search",
@@ -49,7 +49,7 @@
          ],
          "authentication" : true
       },
-      "get_following" : {
+      "list_following" : {
          "path" : "/:format/user/show/:user/following",
          "method" : "GET",
          "required_params" : [
@@ -57,7 +57,7 @@
             "user"
          ]
       },
-      "get_followers" : {
+      "list_followers" : {
          "path" : "/:format/user/show/:user/followers",
          "method" : "GET",
          "required_params" : [
@@ -83,7 +83,7 @@
          ],
          "authentication" : true
       },
-      "get_watched_repos" : {
+      "list_watched_repos" : {
          "path" : "/:format/repos/watched/:user",
          "method" : "GET",
          "required_params" : [
@@ -91,7 +91,7 @@
             "user"
          ]
       },
-      "get_keys" : {
+      "list_keys" : {
          "path" : "/:format/user/keys",
          "method" : "GET",
          "required_params" : [
@@ -125,7 +125,7 @@
          ],
          "authentication" : true
       },
-      "get_emails" : {
+      "list_emails" : {
          "path" : "/:format/user/emails",
          "method" : "GET",
          "required_params" : [

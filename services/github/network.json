@@ -1,6 +1,6 @@
 {
    "base_url" : "http://github.com/api/v2/",
-   "version" : "0.3",
+   "version" : "0.4",
    "methods" : {
       "get_network_meta" : {
          "path" : "/:user/:repo/network_meta",
@@ -10,13 +10,17 @@
             "repo"
          ]
       },
-      "get_network_data" : {
+      "list_network_data" : {
          "path" : "/:user/:repo/network_data_chunk",
          "method" : "GET",
          "required_params" : [
             "user",
             "repo",
             "nethash"
+         ],
+         "optional_params" : [
+            "start",
+            "end"
          ]
       }
    },
