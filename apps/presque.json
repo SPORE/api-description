@@ -109,8 +109,8 @@
          "optional_params" : [
             "delayed"
          ],
-         "path" : "/q/:queue_name",
-         "method" : "POST"
+         "path" : "/qb/:queue_name",
+         "method" : "PUT"
       },
       "queue_status" : {
          "required_params" : [
