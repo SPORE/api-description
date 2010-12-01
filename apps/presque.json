@@ -110,7 +110,7 @@
             "delayed"
          ],
          "path" : "/qb/:queue_name",
-         "method" : "PUT"
+         "method" : "POST"
       },
       "queue_status" : {
          "required_params" : [
