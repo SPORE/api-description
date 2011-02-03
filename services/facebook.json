@@ -1,0 +1,13 @@
+{
+"base_url": "https://api.facebook.com",
+"version":"0.1",
+"methods":{
+  "fql":{
+    "required_params":["query"],
+    "optional_params":["format"],
+    "expected_status":["200"],
+    "path":"/method/fql.query",
+    "method":"GET"
+  }
+}
+}
