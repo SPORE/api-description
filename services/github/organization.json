@@ -1,0 +1,58 @@
+{
+   "base_url" : "http://github.com/api/v2/",
+   "version" : "0.1",
+   "methods" : {
+      "get_organization" : {
+         "path" : "/:format/organizations/:org",
+         "method" : "GET",
+         "required_params" : [
+            "format",
+            "org"
+         ]
+      },
+      "get_organization_teams" : {
+        "path" : "/:format/organizations/:org/teams",
+        "method" : "GET",
+        "required_params" : [
+            "format",
+            "org"
+        ],
+        "authentication" : true
+      },
+      "get_organization_repositories" : {
+        "path" : "/:format/organizations/:org/repositories",
+        "method" : "GET",
+        "required_params" : [
+            "format",
+            "org"
+        ],
+        "authentication" : true
+      },
+      "get_team_members" : {
+        "path" : "/:format/teams/:team/members",
+        "method" : "GET",
+        "requires_params" : [
+            "format",
+            "team"
+        ],
+        "authentication" : true
+      },
+      "get_team_repositories" : {
+        "path" : "/:format/teams/:team/repositories",
+        "method" : "GET",
+        "required_params" : [
+            "format",
+            "team"
+        ],
+        "authentication" : true
+      }
+   },
+   "expected_status" : [ 200 ],
+   "name" : "GitHub",
+   "authority" : "http://github.com/SPORE",
+   "meta" : {
+      "documentation" : "http://develop.github.com/",
+      "module" : "organization"
+   }
+}
+
