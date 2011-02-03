@@ -10,6 +10,7 @@ check: spore_validation.rx
 	@$(VALIDATOR) repository.json
 	@$(VALIDATOR) commit.json
 	@$(VALIDATOR) object.json
+	@$(VALIDATOR) organization.json
 
 test: check
 
@@ -28,7 +29,8 @@ github.dot: \
     network.json \
     repository.json \
     commit.json \
-    object.json
+    object.json \
+    organization.json
 	$(SPORE2DOT) $^ > $@
 
 clean:
