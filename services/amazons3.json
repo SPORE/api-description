@@ -1,0 +1,311 @@
+{
+   "name" : "Amazon S3",
+   "version" : "0.1",
+   "base_url" : "http://s3.amazonaws.com",
+   "methods" : {
+      "get_service" : {
+         "path" : "/",
+         "method" : "GET",
+         "headers" : {
+            "Date" : "AWS"
+         }
+      },
+      "delete_bucket" : {
+         "path" : "/",
+         "method" : "DELETE",
+         "headers" : {
+            "Date" : "AWS"
+         },
+         "optional_params" : [
+            "bucket"
+         ],
+         "expected_status" : [ 204 ]
+      },
+      "delete_bucket_policy" : {
+         "path" : "/?policy",
+         "method" : "DELETE",
+         "headers" : {
+            "Date" : "AWS"
+         },
+         "optional_params" : [
+            "bucket"
+         ],
+         "expected_status" : [ 204 ]
+      },
+      "get_bucket" : {
+         "path" : "/",
+         "method" : "GET",
+         "headers" : {
+            "Date" : "AWS"
+         },
+         "optional_params" : [
+            "bucket",
+            "delimiter",
+            "marker",
+            "max-keys",
+            "prefix"
+         ]
+      },
+      "get_bucket_acl" : {
+         "path" : "/?acl",
+         "method" : "GET",
+         "headers" : {
+            "Date" : "AWS"
+         },
+         "optional_params" : [
+            "bucket"
+         ]
+      },
+      "get_bucket_policy" : {
+         "path" : "/?policy",
+         "method" : "GET",
+         "headers" : {
+            "Date" : "AWS"
+         },
+         "optional_params" : [
+            "bucket"
+         ]
+      },
+      "get_bucket_location" : {
+         "path" : "/?location",
+         "method" : "GET",
+         "headers" : {
+            "Date" : "AWS"
+         },
+         "optional_params" : [
+            "bucket"
+         ]
+      },
+      "get_bucket_notification" : {
+         "path" : "/?notification",
+         "method" : "GET",
+         "headers" : {
+            "Date" : "AWS"
+         },
+         "optional_params" : [
+            "bucket"
+         ]
+      },
+      "get_bucket_object_versions" : {
+         "path" : "/?versions",
+         "method" : "GET",
+         "headers" : {
+            "Date" : "AWS"
+         },
+         "optional_params" : [
+            "bucket",
+            "delimiter",
+            "key-marker",
+            "max-keys",
+            "prefix",
+            "version-id-marker"
+         ]
+      },
+      "get_bucket_request_payment" : {
+         "path" : "/?requestPayment",
+         "method" : "GET",
+         "headers" : {
+            "Date" : "AWS"
+         },
+         "optional_params" : [
+            "bucket"
+         ]
+      },
+      "get_bucket_versioning" : {
+         "path" : "/?versioning",
+         "method" : "GET",
+         "headers" : {
+            "Date" : "AWS"
+         },
+         "optional_params" : [
+            "bucket"
+         ]
+      },
+      "get_bucket_logging" : {
+         "path" : "/?logging",
+         "method" : "GET",
+         "headers" : {
+            "Date" : "AWS"
+         },
+         "optional_params" : [
+            "bucket"
+         ]
+      },
+      "get_bucket_uploads" : {
+         "path" : "/?uploads",
+         "method" : "GET",
+         "headers" : {
+            "Date" : "AWS"
+         },
+         "optional_params" : [
+            "bucket"
+         ]
+      },
+      "put_bucket" : {
+         "path" : "/",
+         "method" : "PUT",
+         "headers" : {
+            "Date" : "AWS"
+         },
+         "optional_params" : [
+            "bucket"
+         ]
+      },
+      "put_bucket_acl" : {
+         "path" : "/?acl",
+         "method" : "PUT",
+         "headers" : {
+            "Date" : "AWS"
+         },
+         "optional_params" : [
+            "bucket"
+         ],
+         "optional_payload" : true
+      },
+      "put_bucket_policy" : {
+         "path" : "/?policy",
+         "method" : "PUT",
+         "headers" : {
+            "Date" : "AWS"
+         },
+         "optional_params" : [
+            "bucket"
+         ],
+         "optional_payload" : true
+      },
+      "put_bucket_logging" : {
+         "path" : "/?logging",
+         "method" : "PUT",
+         "headers" : {
+            "Date" : "AWS"
+         },
+         "optional_params" : [
+            "bucket"
+         ],
+         "optional_payload" : true
+      },
+      "put_bucket_notification" : {
+         "path" : "/?notification",
+         "method" : "PUT",
+         "headers" : {
+            "Date" : "AWS"
+         },
+         "optional_params" : [
+            "bucket"
+         ],
+         "optional_payload" : true
+      },
+      "put_bucket_request_payment" : {
+         "path" : "/?requestPayment",
+         "method" : "PUT",
+         "headers" : {
+            "Date" : "AWS"
+         },
+         "optional_params" : [
+            "bucket"
+         ],
+         "optional_payload" : true
+      },
+      "put_bucket_versioning" : {
+         "path" : "/?versioning",
+         "method" : "PUT",
+         "headers" : {
+            "Date" : "AWS"
+         },
+         "optional_params" : [
+            "bucket"
+         ],
+         "optional_payload" : true
+      },
+      "delete_object" : {
+         "path" : "/:object",
+         "method" : "DELETE",
+         "headers" : {
+            "Date" : "AWS"
+         },
+         "required_params" : [
+            "object"
+         ],
+         "optional_params" : [
+            "bucket"
+         ],
+         "expected_status" : [ 204, 404 ]
+      },
+      "head_object" : {
+         "path" : "/:object",
+         "method" : "HEAD",
+         "headers" : {
+            "Date" : "AWS"
+         },
+         "required_params" : [
+            "object"
+         ],
+         "optional_params" : [
+            "bucket"
+         ]
+      },
+      "get_object" : {
+         "path" : "/:object",
+         "method" : "GET",
+         "headers" : {
+            "Date" : "AWS"
+         },
+         "required_params" : [
+            "object"
+         ],
+         "optional_params" : [
+            "bucket"
+         ]
+      },
+      "post_object" : {
+         "path" : "/:object",
+         "method" : "POST",
+         "headers" : {
+            "Date" : "AWS"
+         },
+         "required_params" : [
+            "object"
+         ],
+         "optional_params" : [
+            "bucket"
+         ]
+      },
+      "put_object" : {
+         "path" : "/:object",
+         "method" : "PUT",
+         "headers" : {
+            "Date" : "AWS"
+         },
+         "required_params" : [
+            "object"
+         ],
+         "optional_params" : [
+            "bucket"
+         ],
+         "optional_payload" : true
+      },
+      "put_object_acl" : {
+         "path" : "/:object?acl",
+         "method" : "PUT",
+         "headers" : {
+            "Date" : "AWS"
+         },
+         "required_params" : [
+            "object"
+         ],
+         "optional_params" : [
+            "bucket"
+         ],
+         "optional_payload" : true
+      }
+   },
+   "authentication" : true,
+   "expected_status" : [ 200, 404 ],
+   "formats" : [ "xml" ],
+   "authority" : "GITHUB:agladysh, GITHUB:vladfedin",
+   "meta" : {
+      "documentation" : "http://docs.amazonwebservices.com/AmazonS3/latest/dev/",
+      "authors" : "LogicEditor.com: Alexander Gladysh, Vladimir Fedin"
+   }
+}
+
