@@ -1,0 +1,18 @@
+{
+"base_url": "http://api.geonames.org",
+"version": "0.1",
+"name": "GeoNames",
+"authority": "GITHUB:franckcuny",
+"meta": {
+  "documentation": "http://www.geonames.org/export/web-services.html",
+},
+"methods": {
+  "search": {
+    "method": "GET",
+    "path" : "/searchJSON",
+    "expected_status": ["200"],
+    "optional_params": ["maxRows"],
+    "required_params": ["q"]
+  }
+}
+}
