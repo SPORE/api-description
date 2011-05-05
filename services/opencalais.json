@@ -1,0 +1,11 @@
+{
+   "name" : "OpenCalais",
+   "version" : "0.1",
+   "base_url" : "http://api.opencalais.com/tag/rs/",
+   "methods" : {
+      "enrich" : {
+         "path" : "/enrich",
+         "method" : "POST"
+      }
+    }
+}
