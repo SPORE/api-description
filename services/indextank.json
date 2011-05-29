@@ -1,0 +1,88 @@
+{
+"version":"0.1",
+"name":"IndexTank",
+"authority":"http://github.com/SPORE",
+"method":{
+  "documentation":"http://indextank.com/documentation/api"
+},
+"methods":{
+  "list_indexes":{
+    "path":"/v1/indexes",
+    "method":"GET",
+    "expected_status":[200]
+  },
+  "get_index":{
+    "path":"/v1/indexes/:name",
+    "method":"GET",
+    "expected_status":[200],
+    "required_params":["name"]
+  },
+  "create_index":{
+    "path":"/v1/indexes/:name",
+    "method":"PUT",
+    "expected_status":[201,204],
+    "required_params":["name"]
+  },
+  "delete_index":{
+    "path":"/v1/indexes/:name",
+    "method":"DELETE",
+    "expected_status":[200],
+    "required_params":["name"]
+  },
+  "add_documents":{
+    "path":"/v1/indexes/:name/docs",
+    "method":"PUT",
+    "expected_status":[200],
+    "required_params":["name"]
+  },
+  "delete_document":{
+    "path":"/v1/indexes/:name/docs",
+    "method":"DELETE",
+    "expected_status":[200],
+    "required_params":["docid", "name"]
+  },
+  "update_variables":{
+    "path":"/v1/indexes/:name/docs/variables",
+    "method":"PUT",
+    "expected_status":[200],
+    "required_params":["name"]
+  },
+  "update_categories":{
+    "path":"/v1/indexes/:name/docs/categories",
+    "method":"PUT",
+    "expected_status":[200],
+    "required_params":["name"]
+  },
+  "add_function":{
+    "path":"/v1/indexes/:name/functions/:number",
+    "method":"PUT",
+    "expected_status":[200],
+    "required_params":["name"]
+  },
+  "get_functions":{
+    "path":"/v1/indexes/:name/functions",
+    "method":"GET",
+    "expected_status":[200],
+    "required_params":["name"]
+  },
+  "delete_function":{
+    "path":"/v1/indexes/:name/functions/:number",
+    "method":"DELETE",
+    "expected_status":[200],
+    "required_params":["name"]
+  },
+  "search":{
+    "path":"/v1/indexes/:name/search",
+    "method":"GET",
+    "expected_status":[200],
+    "required_params":["name", "q"],
+    "optional_params":["start", "len", "function", "fetch", "snippet", "var", "category_filters", "filter_docvar","filter_function"]
+  },
+  "promote":{
+    "path":"/v1/indexes/:name/promote",
+    "method":"PUT",
+    "expected_status":[200],
+    "required_params":["name"]
+  }
+}
+}
