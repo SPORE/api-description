@@ -4,7 +4,7 @@
 "name": "GeoNames",
 "authority": "GITHUB:franckcuny",
 "meta": {
-  "documentation": "http://www.geonames.org/export/web-services.html",
+  "documentation": "http://www.geonames.org/export/web-services.html"
 },
 "methods": {
   "search": {
@@ -12,7 +12,7 @@
     "path" : "/searchJSON",
     "expected_status": ["200"],
     "optional_params": ["maxRows"],
-    "required_params": ["q"]
+    "required_params": ["q","username"]
   }
 }
 }
