@@ -1,0 +1,37 @@
+{
+   "name" : "GoogleTranslate",
+   "version" : "0.1",
+   "base_url" : "https://www.googleapis.com/language/translate/v2",
+   "methods" : {
+      "translate" : {
+         "path" : "",
+         "method" : "GET",
+         "required_params" : [
+            "key",
+            "source",
+            "target",
+            "q"
+         ]
+      },
+      "languages" : {
+         "path" : "/languages",
+         "method" : "GET",
+         "required_params" : [
+            "key",
+            "target"
+         ]
+      },
+      "detect" : {
+         "path" : "/detect",
+         "method" : "GET",
+         "required_params" : [
+            "key",
+            "q"
+         ]
+      }
+   },
+   "authority" : "http://github.com/SPORE",
+   "meta" : {
+      "documentation" : "https://code.google.com/apis/language/translate/v2/getting_started.html"
+   }
+}
