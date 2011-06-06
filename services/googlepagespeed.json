@@ -1,0 +1,27 @@
+{
+   "name" : "Google Page Speed",
+   "version" : "0.1",
+   "base_url" : "https://www.googleapis.com/pagespeedonline/v1",
+   "methods" : {
+      "run" : {
+         "path" : "/runPagespeed",
+         "method" : "GET",
+         "required_params" : [
+            "key",
+            "url"
+         ],
+         "optional_params" : [
+            "callback",
+            "locale",
+            "prettyprint",
+            "rule",
+            "strategy",
+            "userIp"
+         ]
+      }
+   },
+   "authority" : "http://github.com/SPORE",
+   "meta" : {
+      "documentation" : "https://code.google.com/apis/pagespeedonline/v1/getting_started.html"
+   }
+}
