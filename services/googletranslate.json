@@ -30,6 +30,7 @@
          ]
       }
    },
+   "expected_status": [ "200" ],
    "authority" : "http://github.com/SPORE",
    "meta" : {
       "documentation" : "https://code.google.com/apis/language/translate/v2/getting_started.html"

@@ -1,0 +1,41 @@
+{
+   "name" : "Google URL Shortener",
+   "version" : "0.1",
+   "base_url" : "https://www.googleapis.com/urlshortener/v1/url",
+   "methods" : {
+      "insert" : {
+         "path" : "",
+         "method" : "POST",
+         "required_payload" : true,
+         "optional_params" : [
+            "key"
+         ]
+      },
+      "get" : {
+         "path" : "",
+         "method" : "GET",
+         "required_params" : [
+            "shortUrl"
+         ],
+         "optional_params" : [
+            "key",
+            "projection"
+         ]
+      },
+      "list" : {
+         "path" : "/history",
+         "method" : "GET",
+         "optional_params" : [
+            "key",
+            "projection",
+            "start-token"
+         ],
+         "authentication" : true
+      }
+   },
+   "expected_status": [ "200" ],
+   "authority" : "http://github.com/SPORE",
+   "meta" : {
+      "documentation" : "http://code.google.com/apis/urlshortener/v1/getting_started.html"
+   }
+}
