@@ -25,6 +25,9 @@
       "list" : {
          "path" : "/history",
          "method" : "GET",
+         "headers" : {
+            "authorization" : "OAuth oauth_consumer_key=\":oauth_consumer_key\", oauth_nonce=\":oauth_nonce\", oauth_signature_method=\":oauth_signature_method\", oauth_timestamp=\":oauth_timestamp\", oauth_token=\":oauth_token\", oauth_version=\":oauth_version\", oauth_signature=\":oauth_signature\""
+         },
          "optional_params" : [
             "key",
             "projection",
