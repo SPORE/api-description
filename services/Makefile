@@ -3,6 +3,7 @@ SPORE2DOT := perl ../utils/spore2dot.pl
 
 check: spore_validation.rx
 	@make -C github check
+	@make -C googlemaps check
 	@$(VALIDATOR) amazons3.json
 	@$(VALIDATOR) backtweet.json
 	@$(VALIDATOR) backtype.json
@@ -33,6 +34,7 @@ png: \
     ohloh.png \
     twitter.png
 	@make -C github png
+	@make -C googlemaps png
 
 %.png : %.dot
 	dot -T png -o $@ $<
@@ -42,4 +44,5 @@ png: \
 
 clean:
 	@make -C github clean
+	@make -C googlemaps clean
 	-rm *.png *.dot spore_validation.rx

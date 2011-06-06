@@ -1,0 +1,31 @@
+{
+   "version" : "0.1",
+   "base_url" : "http://maps.googleapis.com/maps/api",
+   "methods" : {
+      "directions" : {
+         "path" : "/directions/:format",
+         "method" : "GET",
+         "required_params" : [
+            "format",
+            "origin",
+            "destination",
+            "sensor"
+         ],
+         "optional_params" : [
+            "mode",
+            "waypoints",
+            "alternatives",
+            "avoid",
+            "units",
+            "region",
+            "language"
+         ]
+      }
+   },
+   "authority" : "http://github.com/SPORE",
+   "name" : "Google Maps",
+   "meta" : {
+      "documentation" : "http://code.google.com/apis/maps/documentation/directions/",
+      "module" : "Directions"
+   }
+}

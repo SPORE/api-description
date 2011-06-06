@@ -1,0 +1,40 @@
+{
+   "version" : "0.1",
+   "base_url" : "http://maps.googleapis.com/maps/api",
+   "methods" : {
+      "geocode" : {
+         "path" : "/geocode/:format",
+         "method" : "GET",
+         "required_params" : [
+            "format",
+            "address",
+            "sensor"
+         ],
+         "optional_params" : [
+            "bounds",
+            "region",
+            "language"
+         ]
+      },
+      "address_lookup" : {
+         "path" : "/geocode/:format",
+         "method" : "GET",
+         "required_params" : [
+            "format",
+            "latlng",
+            "sensor"
+         ],
+         "optional_params" : [
+            "bounds",
+            "region",
+            "language"
+         ]
+      }
+   },
+   "authority" : "http://github.com/SPORE",
+   "name" : "Google Maps",
+   "meta" : {
+      "documentation" : "http://code.google.com/apis/maps/documentation/geocoding/",
+      "module" : "Geocoding"
+   }
+}

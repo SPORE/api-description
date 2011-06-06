@@ -1,0 +1,28 @@
+{
+   "version" : "0.1",
+   "base_url" : "http://maps.googleapis.com/maps/api",
+   "methods" : {
+      "distancematrix" : {
+         "path" : "/distancematrix/:format",
+         "method" : "GET",
+         "required_params" : [
+            "format",
+            "origins",
+            "destinations",
+            "sensor"
+         ],
+         "optional_params" : [
+            "mode",
+            "language",
+            "avoid",
+            "units"
+         ]
+      }
+   },
+   "authority" : "http://github.com/SPORE",
+   "name" : "Google Maps",
+   "meta" : {
+      "documentation" : "http://code.google.com/apis/maps/documentation/distancematrix/",
+      "module" : "Distance Matrix"
+   }
+}
