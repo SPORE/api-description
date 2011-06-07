@@ -1,0 +1,24 @@
+{
+   "base_url" : "https://accounts.google.com/o/oauth2",
+   "version" : "0.1",
+   "name" : "Google OAuth 2.0",
+   "methods" : {
+      "authorize" : {
+         "path" : "/auth",
+         "method" : "GET",
+         "required_params" : [
+            "client_id",
+            "redirect_uri",
+            "response_type",
+            "scope"
+         ],
+         "optional_params" : [
+            "state"
+         ]
+     }
+   },
+   "authority" : "http://github.com/SPORE",
+   "meta" : {
+      "documentation" : "http://code.google.com/apis/accounts/docs/OAuth2.html"
+   }
+}

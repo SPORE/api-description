@@ -9,6 +9,7 @@ check: spore_validation.rx
 	@$(VALIDATOR) backtype.json
 	@$(VALIDATOR) github.json
 	@$(VALIDATOR) googleoauth.json
+	@$(VALIDATOR) googleoauth2.json
 	@$(VALIDATOR) googlepagespeed.json
 	@$(VALIDATOR) googleshortener.json
 	@$(VALIDATOR) googletranslate.json
@@ -27,6 +28,7 @@ png: \
     backtype.png \
     github.png \
     googleoauth.png \
+    googleoauth2.png \
     googlepagespeed.png \
     googleshortener.png \
     googletranslate.png \
