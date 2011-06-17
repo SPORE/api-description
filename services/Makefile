@@ -16,6 +16,7 @@ check: spore_validation.rx
 	@$(VALIDATOR) ihackernews.json
 	@$(VALIDATOR) ohloh.json
 	@$(VALIDATOR) twitter.json
+	@$(VALIDATOR) intervals.json
 
 test: check
 
