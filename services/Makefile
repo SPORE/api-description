@@ -21,7 +21,7 @@ check: spore_validation.rx
 test: check
 
 spore_validation.rx:
-	wget http://github.com/SPORE/specifications/raw/master/spore_validation.rx
+	wget http://raw.github.com/SPORE/specifications/master/spore_validation.rx
 
 png: \
     amazons3.png \
