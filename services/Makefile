@@ -35,6 +35,8 @@ png: \
     googletranslate.png \
     ihackernews.png \
     ohloh.png \
+    intervals.png \
+    indextank.png \
     twitter.png
 	@make -C github png
 	@make -C googlemaps png
