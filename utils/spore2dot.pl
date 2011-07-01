@@ -34,6 +34,7 @@ if ($has_interface) {
 
 }
 
+my $MAX_LEN = 90;
 my %meth;
 foreach my $spec (@specs) {
     my $name = $spec->{meta}->{module} || $spec->{name};
@@ -46,29 +47,47 @@ foreach my $spec (@specs) {
         $meth{$name} = 1;
         my $desc = $spec->{methods}->{$name};
         print $name, "(";
+        my $len = length $name;
         my $first = 1;
         if ($desc->{required_payload}) {
             print "payload";
+            $len += 7;
             $first = 0;
         }
         for (@{$desc->{required_params}}) {
             print ", " unless $first;
+            $len += 2;
+            if ($len > $MAX_LEN) {
+                print "\\l&nbsp;&nbsp;&nbsp;&nbsp;";
+                $len = 4;
+            }
             print $_;
+            $len += length $_;
             $first = 0;
         }
         if ($desc->{optional_params}) {
             print " " unless $first;
         }
         for (@{$desc->{optional_params}}) {
+            if ($len > $MAX_LEN) {
+                print "\\l&nbsp;&nbsp;&nbsp;&nbsp;";
+                $len = 4;
+            }
             print "\\[";
             print ", " unless $first;
             print $_, "\\]";
+            $len += 4 + length $_;
             $first = 0;
         }
         if ($desc->{optional_payload}) {
+            if ($len > $MAX_LEN) {
+                print "\\l&nbsp;&nbsp;&nbsp;&nbsp;";
+                $len = 4;
+            }
             print "\\[";
             print ", " unless $first;
             print "payload\\]";
+            $len += 11;
             $first = 0;
         }
         if ($desc->{unattended_params} || $spec->{unattended_params}) {
