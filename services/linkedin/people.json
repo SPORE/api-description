@@ -1,0 +1,150 @@
+{
+   "version" : "0.1",
+   "base_url" : "http://api.linkedin.com",
+   "methods" : {
+      "my_profile" : {
+         "path" : "/v1/people/~:selector",
+         "method" : "GET",
+         "headers" : {
+            "Authorization" : "OAuth oauth_consumer_key=\":oauth_consumer_key\", oauth_nonce=\":oauth_nonce\", oauth_signature_method=\":oauth_signature_method\", oauth_timestamp=\":oauth_timestamp\", oauth_token=\":oauth_token\", oauth_version=\":oauth_version\", oauth_signature=\":oauth_signature\"",
+            "Accept-Language" : ":lang"
+         },
+         "required_params" : [
+            "selector"
+         ],
+         "optional_params" : [
+            "format",
+            "lang"
+         ],
+         "expected_status" : [ 200 ]
+      },
+      "profile_by_id" : {
+         "path" : "/v1/people/id=:id:selector",
+         "method" : "GET",
+         "headers" : {
+            "Authorization" : "OAuth oauth_consumer_key=\":oauth_consumer_key\", oauth_nonce=\":oauth_nonce\", oauth_signature_method=\":oauth_signature_method\", oauth_timestamp=\":oauth_timestamp\", oauth_token=\":oauth_token\", oauth_version=\":oauth_version\", oauth_signature=\":oauth_signature\"",
+            "Accept-Language" : ":lang"
+         },
+         "required_params" : [
+            "id",
+            "selector"
+         ],
+         "optional_params" : [
+            "format",
+            "lang"
+         ],
+         "expected_status" : [ 200, 404 ]
+      },
+      "profile_by_url" : {
+         "path" : "/v1/people/url=:url:selector",
+         "method" : "GET",
+         "headers" : {
+            "Authorization" : "OAuth oauth_consumer_key=\":oauth_consumer_key\", oauth_nonce=\":oauth_nonce\", oauth_signature_method=\":oauth_signature_method\", oauth_timestamp=\":oauth_timestamp\", oauth_token=\":oauth_token\", oauth_version=\":oauth_version\", oauth_signature=\":oauth_signature\"",
+            "Accept-Language" : ":lang"
+         },
+         "required_params" : [
+            "url",
+            "selector"
+         ],
+         "optional_params" : [
+            "format",
+            "lang"
+         ],
+         "expected_status" : [ 200, 404 ]
+      },
+      "search_people" : {
+         "path" : "/v1/people-search:selector",
+         "method" : "GET",
+         "headers" : {
+            "Authorization" : "OAuth oauth_consumer_key=\":oauth_consumer_key\", oauth_nonce=\":oauth_nonce\", oauth_signature_method=\":oauth_signature_method\", oauth_timestamp=\":oauth_timestamp\", oauth_token=\":oauth_token\", oauth_version=\":oauth_version\", oauth_signature=\":oauth_signature\""
+         },
+         "required_params" : [
+            "selector"
+         ],
+         "optional_params" : [
+            "keywords",
+            "first-name",
+            "last-name",
+            "company-name",
+            "current-company",
+            "title",
+            "current-title",
+            "school-name",
+            "current-school",
+            "country-code",
+            "postal-code",
+            "distance",
+            "facet",
+            "facets",
+            "start",
+            "count",
+            "sort",
+            "format"
+         ],
+         "expected_status" : [ 200 ]
+      },
+      "my_connections" : {
+         "path" : "/v1/people/~/connections:selector",
+         "method" : "GET",
+         "headers" : {
+            "Authorization" : "OAuth oauth_consumer_key=\":oauth_consumer_key\", oauth_nonce=\":oauth_nonce\", oauth_signature_method=\":oauth_signature_method\", oauth_timestamp=\":oauth_timestamp\", oauth_token=\":oauth_token\", oauth_version=\":oauth_version\", oauth_signature=\":oauth_signature\""
+         },
+         "required_params" : [
+            "selector"
+         ],
+         "optional_params" : [
+            "start",
+            "count",
+            "modified",
+            "modified-since",
+            "format"
+         ],
+         "expected_status" : [ 200 ]
+      },
+      "connections_by_id" : {
+         "path" : "/v1/people/id=:id/connections:selector",
+         "method" : "GET",
+         "headers" : {
+            "Authorization" : "OAuth oauth_consumer_key=\":oauth_consumer_key\", oauth_nonce=\":oauth_nonce\", oauth_signature_method=\":oauth_signature_method\", oauth_timestamp=\":oauth_timestamp\", oauth_token=\":oauth_token\", oauth_version=\":oauth_version\", oauth_signature=\":oauth_signature\""
+         },
+         "required_params" : [
+            "id",
+            "selector"
+         ],
+         "optional_params" : [
+            "start",
+            "count",
+            "modified",
+            "modified-since",
+            "format"
+         ],
+         "expected_status" : [ 200, 404 ]
+      },
+      "connections_by_url" : {
+         "path" : "/v1/people/url=:url/connnections:selector",
+         "method" : "GET",
+         "headers" : {
+            "Authorization" : "OAuth oauth_consumer_key=\":oauth_consumer_key\", oauth_nonce=\":oauth_nonce\", oauth_signature_method=\":oauth_signature_method\", oauth_timestamp=\":oauth_timestamp\", oauth_token=\":oauth_token\", oauth_version=\":oauth_version\", oauth_signature=\":oauth_signature\""
+         },
+         "required_params" : [
+            "url",
+            "selector"
+         ],
+         "optional_params" : [
+            "start",
+            "count",
+            "modified",
+            "modified-since",
+            "format"
+         ],
+         "expected_status" : [ 200, 404 ]
+      }
+   },
+   "authentication" : true,
+   "authority" : "http://github.com/SPORE",
+   "name" : "LinkedIn",
+   "meta" : {
+      "documentation" : "http://developer.linkedin.com/",
+      "module" : "People"
+   }
+}

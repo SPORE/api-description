@@ -1,0 +1,31 @@
+{
+   "version" : "0.1",
+   "base_url" : "http://api.linkedin.com",
+   "methods" : {
+      "send_message" : {
+         "path" : "/v1/people/~/mailbox",
+         "method" : "POST",
+         "headers" : {
+            "Authorization" : "OAuth oauth_consumer_key=\":oauth_consumer_key\", oauth_nonce=\":oauth_nonce\", oauth_signature_method=\":oauth_signature_method\", oauth_timestamp=\":oauth_timestamp\", oauth_token=\":oauth_token\", oauth_version=\":oauth_version\", oauth_signature=\":oauth_signature\""
+         },
+         "required_payload" : true,
+         "expected_status" : [ 201 ]
+      },
+      "send_invitation" : {
+         "path" : "/v1/people/~/mailbox",
+         "method" : "POST",
+         "headers" : {
+            "Authorization" : "OAuth oauth_consumer_key=\":oauth_consumer_key\", oauth_nonce=\":oauth_nonce\", oauth_signature_method=\":oauth_signature_method\", oauth_timestamp=\":oauth_timestamp\", oauth_token=\":oauth_token\", oauth_version=\":oauth_version\", oauth_signature=\":oauth_signature\""
+         },
+         "required_payload" : true,
+         "expected_status" : [ 201 ]
+      }
+   },
+   "authentication" : true,
+   "authority" : "http://github.com/SPORE",
+   "name" : "LinkedIn",
+   "meta" : {
+      "documentation" : "http://developer.linkedin.com/",
+      "module" : "Communications"
+   }
+}
