@@ -27,7 +27,6 @@
          "method" : "GET",
          "optional_params" : [
             "key",
-            "oauth_token",
             "projection",
             "start-token"
          ],

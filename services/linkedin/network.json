@@ -5,9 +5,6 @@
       "my_network_updates" : {
          "path" : "/v1/people/~/network/updates",
          "method" : "GET",
-         "headers" : {
-            "Authorization" : "OAuth oauth_consumer_key=\":oauth_consumer_key\", oauth_nonce=\":oauth_nonce\", oauth_signature_method=\":oauth_signature_method\", oauth_timestamp=\":oauth_timestamp\", oauth_token=\":oauth_token\", oauth_version=\":oauth_version\", oauth_signature=\":oauth_signature\""
-         },
          "optional_params" : [
             "scope",
             "type",
@@ -23,9 +20,6 @@
       "network_updates_by_id" : {
          "path" : "/v1/people/id=:id/network/updates",
          "method" : "GET",
-         "headers" : {
-            "Authorization" : "OAuth oauth_consumer_key=\":oauth_consumer_key\", oauth_nonce=\":oauth_nonce\", oauth_signature_method=\":oauth_signature_method\", oauth_timestamp=\":oauth_timestamp\", oauth_token=\":oauth_token\", oauth_version=\":oauth_version\", oauth_signature=\":oauth_signature\""
-         },
          "required_params" : [
             "id"
          ],
@@ -44,9 +38,6 @@
       "my_network_stats" : {
          "path" : "/v1/people/~/network/network-stats",
          "method" : "GET",
-         "headers" : {
-            "Authorization" : "OAuth oauth_consumer_key=\":oauth_consumer_key\", oauth_nonce=\":oauth_nonce\", oauth_signature_method=\":oauth_signature_method\", oauth_timestamp=\":oauth_timestamp\", oauth_token=\":oauth_token\", oauth_version=\":oauth_version\", oauth_signature=\":oauth_signature\""
-         },
          "optional_params" : [
             "format"
          ],
@@ -55,18 +46,12 @@
       "post_update" : {
          "path" : "/v1/people/~/person-activities",
          "method" : "POST",
-         "headers" : {
-            "Authorization" : "OAuth oauth_consumer_key=\":oauth_consumer_key\", oauth_nonce=\":oauth_nonce\", oauth_signature_method=\":oauth_signature_method\", oauth_timestamp=\":oauth_timestamp\", oauth_token=\":oauth_token\", oauth_version=\":oauth_version\", oauth_signature=\":oauth_signature\""
-         },
          "required_payload" : true,
          "expected_status" : [ 201 ]
       },
       "add_shares" : {
          "path" : "/v1/people/~/shares",
          "method" : "POST",
-         "headers" : {
-            "Authorization" : "OAuth oauth_consumer_key=\":oauth_consumer_key\", oauth_nonce=\":oauth_nonce\", oauth_signature_method=\":oauth_signature_method\", oauth_timestamp=\":oauth_timestamp\", oauth_token=\":oauth_token\", oauth_version=\":oauth_version\", oauth_signature=\":oauth_signature\""
-         },
          "required_payload" : true,
          "expected_status" : [ 201 ]
       }

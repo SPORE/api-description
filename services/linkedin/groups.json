@@ -5,9 +5,6 @@
       "group_by_id" : {
          "path" : "/v1/groups/:id:selector",
          "method" : "GET",
-         "headers" : {
-            "Authorization" : "OAuth oauth_consumer_key=\":oauth_consumer_key\", oauth_nonce=\":oauth_nonce\", oauth_signature_method=\":oauth_signature_method\", oauth_timestamp=\":oauth_timestamp\", oauth_token=\":oauth_token\", oauth_version=\":oauth_version\", oauth_signature=\":oauth_signature\""
-         },
          "required_params" : [
             "id",
             "selector"
@@ -20,9 +17,6 @@
       "my_group_memberships" : {
          "path" : "/v1/people/~/group-memberships:selector",
          "method" : "GET",
-         "headers" : {
-            "Authorization" : "OAuth oauth_consumer_key=\":oauth_consumer_key\", oauth_nonce=\":oauth_nonce\", oauth_signature_method=\":oauth_signature_method\", oauth_timestamp=\":oauth_timestamp\", oauth_token=\":oauth_token\", oauth_version=\":oauth_version\", oauth_signature=\":oauth_signature\""
-         },
          "required_params" : [
             "selector"
          ],
@@ -35,9 +29,6 @@
       "show_group_setting" : {
          "path" : "/v1/people/~/group-memberships/:id:selector",
          "method" : "GET",
-         "headers" : {
-            "Authorization" : "OAuth oauth_consumer_key=\":oauth_consumer_key\", oauth_nonce=\":oauth_nonce\", oauth_signature_method=\":oauth_signature_method\", oauth_timestamp=\":oauth_timestamp\", oauth_token=\":oauth_token\", oauth_version=\":oauth_version\", oauth_signature=\":oauth_signature\""
-         },
          "required_params" : [
             "id",
             "selector"
@@ -50,9 +41,6 @@
       "change_group_setting" : {
          "path" : "/v1/people/~/group-memberships/:id",
          "method" : "PUT",
-         "headers" : {
-            "Authorization" : "OAuth oauth_consumer_key=\":oauth_consumer_key\", oauth_nonce=\":oauth_nonce\", oauth_signature_method=\":oauth_signature_method\", oauth_timestamp=\":oauth_timestamp\", oauth_token=\":oauth_token\", oauth_version=\":oauth_version\", oauth_signature=\":oauth_signature\""
-         },
          "required_payload" : true,
          "required_params" : [
             "id"
@@ -62,9 +50,6 @@
       "join_group_by_id" : {
          "path" : "/v1/people/~/group-memberships/:id",
          "method" : "PUT",
-         "headers" : {
-            "Authorization" : "OAuth oauth_consumer_key=\":oauth_consumer_key\", oauth_nonce=\":oauth_nonce\", oauth_signature_method=\":oauth_signature_method\", oauth_timestamp=\":oauth_timestamp\", oauth_token=\":oauth_token\", oauth_version=\":oauth_version\", oauth_signature=\":oauth_signature\""
-         },
          "required_payload" : true,
          "required_params" : [
             "id"
@@ -74,18 +59,12 @@
       "join_group" : {
          "path" : "/v1/people/~/group-memberships",
          "method" : "POST",
-         "headers" : {
-            "Authorization" : "OAuth oauth_consumer_key=\":oauth_consumer_key\", oauth_nonce=\":oauth_nonce\", oauth_signature_method=\":oauth_signature_method\", oauth_timestamp=\":oauth_timestamp\", oauth_token=\":oauth_token\", oauth_version=\":oauth_version\", oauth_signature=\":oauth_signature\""
-         },
          "required_payload" : true,
          "expected_status" : [ 201 ]
       },
       "leave_group" : {
          "path" : "/v1/people/~/group-memberships/:id",
          "method" : "DELETE",
-         "headers" : {
-            "Authorization" : "OAuth oauth_consumer_key=\":oauth_consumer_key\", oauth_nonce=\":oauth_nonce\", oauth_signature_method=\":oauth_signature_method\", oauth_timestamp=\":oauth_timestamp\", oauth_token=\":oauth_token\", oauth_version=\":oauth_version\", oauth_signature=\":oauth_signature\""
-         },
          "required_params" : [
             "id"
          ],
@@ -94,9 +73,6 @@
       "show_posts" : {
          "path" : "/v1/groups/:id/posts:selector",
          "method" : "GET",
-         "headers" : {
-            "Authorization" : "OAuth oauth_consumer_key=\":oauth_consumer_key\", oauth_nonce=\":oauth_nonce\", oauth_signature_method=\":oauth_signature_method\", oauth_timestamp=\":oauth_timestamp\", oauth_token=\":oauth_token\", oauth_version=\":oauth_version\", oauth_signature=\":oauth_signature\""
-         },
          "required_params" : [
             "id",
             "selector"
@@ -115,9 +91,6 @@
       "post_by_id" : {
          "path" : "/v1/posts/:id:selector",
          "method" : "GET",
-         "headers" : {
-            "Authorization" : "OAuth oauth_consumer_key=\":oauth_consumer_key\", oauth_nonce=\":oauth_nonce\", oauth_signature_method=\":oauth_signature_method\", oauth_timestamp=\":oauth_timestamp\", oauth_token=\":oauth_token\", oauth_version=\":oauth_version\", oauth_signature=\":oauth_signature\""
-         },
          "required_params" : [
             "id",
             "selector"
@@ -130,9 +103,6 @@
       "show_comments" : {
          "path" : "/v1/posts/:id/comments:selector",
          "method" : "GET",
-         "headers" : {
-            "Authorization" : "OAuth oauth_consumer_key=\":oauth_consumer_key\", oauth_nonce=\":oauth_nonce\", oauth_signature_method=\":oauth_signature_method\", oauth_timestamp=\":oauth_timestamp\", oauth_token=\":oauth_token\", oauth_version=\":oauth_version\", oauth_signature=\":oauth_signature\""
-         },
          "required_params" : [
             "id",
             "selector"
@@ -148,9 +118,6 @@
       "create_post" : {
          "path" : "/v1/groups/:id/posts",
          "method" : "POST",
-         "headers" : {
-            "Authorization" : "OAuth oauth_consumer_key=\":oauth_consumer_key\", oauth_nonce=\":oauth_nonce\", oauth_signature_method=\":oauth_signature_method\", oauth_timestamp=\":oauth_timestamp\", oauth_token=\":oauth_token\", oauth_version=\":oauth_version\", oauth_signature=\":oauth_signature\""
-         },
          "required_payload" : true,
          "required_params" : [
             "id"
@@ -160,9 +127,6 @@
       "like_post" : {
          "path" : "/v1/posts/:id/relation-to-viewer/is-liked",
          "method" : "PUT",
-         "headers" : {
-            "Authorization" : "OAuth oauth_consumer_key=\":oauth_consumer_key\", oauth_nonce=\":oauth_nonce\", oauth_signature_method=\":oauth_signature_method\", oauth_timestamp=\":oauth_timestamp\", oauth_token=\":oauth_token\", oauth_version=\":oauth_version\", oauth_signature=\":oauth_signature\""
-         },
          "required_payload" : true,
          "required_params" : [
             "id"
@@ -172,9 +136,6 @@
       "follow_post" : {
          "path" : "/v1/posts/:id/relation-to-viewer/is-following",
          "method" : "PUT",
-         "headers" : {
-            "Authorization" : "OAuth oauth_consumer_key=\":oauth_consumer_key\", oauth_nonce=\":oauth_nonce\", oauth_signature_method=\":oauth_signature_method\", oauth_timestamp=\":oauth_timestamp\", oauth_token=\":oauth_token\", oauth_version=\":oauth_version\", oauth_signature=\":oauth_signature\""
-         },
          "required_payload" : true,
          "required_params" : [
             "id"
@@ -184,9 +145,6 @@
       "flag_post" : {
          "path" : "/v1/posts/:id/category/code",
          "method" : "PUT",
-         "headers" : {
-            "Authorization" : "OAuth oauth_consumer_key=\":oauth_consumer_key\", oauth_nonce=\":oauth_nonce\", oauth_signature_method=\":oauth_signature_method\", oauth_timestamp=\":oauth_timestamp\", oauth_token=\":oauth_token\", oauth_version=\":oauth_version\", oauth_signature=\":oauth_signature\""
-         },
          "required_payload" : true,
          "required_params" : [
             "id"
@@ -196,9 +154,6 @@
       "delete_post" : {
          "path" : "/v1/posts/:id",
          "method" : "DELETE",
-         "headers" : {
-            "Authorization" : "OAuth oauth_consumer_key=\":oauth_consumer_key\", oauth_nonce=\":oauth_nonce\", oauth_signature_method=\":oauth_signature_method\", oauth_timestamp=\":oauth_timestamp\", oauth_token=\":oauth_token\", oauth_version=\":oauth_version\", oauth_signature=\":oauth_signature\""
-         },
          "required_params" : [
             "id"
          ],
@@ -207,9 +162,6 @@
       "comment_by_id" : {
          "path" : "/v1/comments/:id:selector",
          "method" : "GET",
-         "headers" : {
-            "Authorization" : "OAuth oauth_consumer_key=\":oauth_consumer_key\", oauth_nonce=\":oauth_nonce\", oauth_signature_method=\":oauth_signature_method\", oauth_timestamp=\":oauth_timestamp\", oauth_token=\":oauth_token\", oauth_version=\":oauth_version\", oauth_signature=\":oauth_signature\""
-         },
          "required_params" : [
             "id",
             "selector"
@@ -222,9 +174,6 @@
       "add_comment" : {
          "path" : "/v1/posts/:id/comments",
          "method" : "POST",
-         "headers" : {
-            "Authorization" : "OAuth oauth_consumer_key=\":oauth_consumer_key\", oauth_nonce=\":oauth_nonce\", oauth_signature_method=\":oauth_signature_method\", oauth_timestamp=\":oauth_timestamp\", oauth_token=\":oauth_token\", oauth_version=\":oauth_version\", oauth_signature=\":oauth_signature\""
-         },
          "required_payload" : true,
          "required_params" : [
             "id"
@@ -234,9 +183,6 @@
       "delete_comment" : {
          "path" : "/v1/comments/:id",
          "method" : "DELETE",
-         "headers" : {
-            "Authorization" : "OAuth oauth_consumer_key=\":oauth_consumer_key\", oauth_nonce=\":oauth_nonce\", oauth_signature_method=\":oauth_signature_method\", oauth_timestamp=\":oauth_timestamp\", oauth_token=\":oauth_token\", oauth_version=\":oauth_version\", oauth_signature=\":oauth_signature\""
-         },
          "required_params" : [
             "id"
          ],
@@ -245,9 +191,6 @@
       "suggestion_groups" : {
          "path" : "/v1/people/~/suggestions/groups:selector",
          "method" : "GET",
-         "headers" : {
-            "Authorization" : "OAuth oauth_consumer_key=\":oauth_consumer_key\", oauth_nonce=\":oauth_nonce\", oauth_signature_method=\":oauth_signature_method\", oauth_timestamp=\":oauth_timestamp\", oauth_token=\":oauth_token\", oauth_version=\":oauth_version\", oauth_signature=\":oauth_signature\""
-         },
          "required_params" : [
             "selector"
          ],
@@ -259,9 +202,6 @@
       "remove_group_suggestion" : {
          "path" : "/v1/people/~/suggestions/groups/:id",
          "method" : "DELETE",
-         "headers" : {
-            "Authorization" : "OAuth oauth_consumer_key=\":oauth_consumer_key\", oauth_nonce=\":oauth_nonce\", oauth_signature_method=\":oauth_signature_method\", oauth_timestamp=\":oauth_timestamp\", oauth_token=\":oauth_token\", oauth_version=\":oauth_version\", oauth_signature=\":oauth_signature\""
-         },
          "required_params" : [
             "id"
          ],

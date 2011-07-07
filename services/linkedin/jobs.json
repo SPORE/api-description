@@ -5,9 +5,6 @@
       "job_by_id" : {
          "path" : "/v1/jobs/:id:selector",
          "method" : "GET",
-         "headers" : {
-            "Authorization" : "OAuth oauth_consumer_key=\":oauth_consumer_key\", oauth_nonce=\":oauth_nonce\", oauth_signature_method=\":oauth_signature_method\", oauth_timestamp=\":oauth_timestamp\", oauth_token=\":oauth_token\", oauth_version=\":oauth_version\", oauth_signature=\":oauth_signature\""
-         },
          "required_params" : [
             "id",
             "selector"
@@ -20,9 +17,6 @@
       "search_job" : {
          "path" : "/v1/job-search:selector",
          "method" : "GET",
-         "headers" : {
-            "Authorization" : "OAuth oauth_consumer_key=\":oauth_consumer_key\", oauth_nonce=\":oauth_nonce\", oauth_signature_method=\":oauth_signature_method\", oauth_timestamp=\":oauth_timestamp\", oauth_token=\":oauth_token\", oauth_version=\":oauth_version\", oauth_signature=\":oauth_signature\""
-         },
          "required_params" : [
             "selector"
          ],
@@ -45,9 +39,6 @@
       "my_bookmarked_jobs" : {
          "path" : "/v1/people/~/job-bookmarks:selector",
          "method" : "GET",
-         "headers" : {
-            "Authorization" : "OAuth oauth_consumer_key=\":oauth_consumer_key\", oauth_nonce=\":oauth_nonce\", oauth_signature_method=\":oauth_signature_method\", oauth_timestamp=\":oauth_timestamp\", oauth_token=\":oauth_token\", oauth_version=\":oauth_version\", oauth_signature=\":oauth_signature\""
-         },
          "required_params" : [
             "selector"
          ],
@@ -59,18 +50,12 @@
       "bookmark_job" : {
          "path" : "/v1/people/~/job-bookmarks",
          "method" : "POST",
-         "headers" : {
-            "Authorization" : "OAuth oauth_consumer_key=\":oauth_consumer_key\", oauth_nonce=\":oauth_nonce\", oauth_signature_method=\":oauth_signature_method\", oauth_timestamp=\":oauth_timestamp\", oauth_token=\":oauth_token\", oauth_version=\":oauth_version\", oauth_signature=\":oauth_signature\""
-         },
          "required_payload" : true,
          "expected_status" : [ 201 ]
       },
       "unbookmark_job" : {
          "path" : "/v1/people/~/job-bookmarks/:id",
          "method" : "DELETE",
-         "headers" : {
-            "Authorization" : "OAuth oauth_consumer_key=\":oauth_consumer_key\", oauth_nonce=\":oauth_nonce\", oauth_signature_method=\":oauth_signature_method\", oauth_timestamp=\":oauth_timestamp\", oauth_token=\":oauth_token\", oauth_version=\":oauth_version\", oauth_signature=\":oauth_signature\""
-         },
          "required_params" : [
             "id"
          ],
@@ -79,9 +64,6 @@
       "suggestion_jobs" : {
          "path" : "/v1/people/~/suggestions/job-suggestions:selector",
          "method" : "GET",
-         "headers" : {
-            "Authorization" : "OAuth oauth_consumer_key=\":oauth_consumer_key\", oauth_nonce=\":oauth_nonce\", oauth_signature_method=\":oauth_signature_method\", oauth_timestamp=\":oauth_timestamp\", oauth_token=\":oauth_token\", oauth_version=\":oauth_version\", oauth_signature=\":oauth_signature\""
-         },
          "required_params" : [
             "selector"
          ],

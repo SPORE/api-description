@@ -5,9 +5,6 @@
       "company_by_id" : {
          "path" : "/v1/compagnies/:id:selector",
          "method" : "GET",
-         "headers" : {
-            "Authorization" : "OAuth oauth_consumer_key=\":oauth_consumer_key\", oauth_nonce=\":oauth_nonce\", oauth_signature_method=\":oauth_signature_method\", oauth_timestamp=\":oauth_timestamp\", oauth_token=\":oauth_token\", oauth_version=\":oauth_version\", oauth_signature=\":oauth_signature\""
-         },
          "required_params" : [
             "id",
             "selector"
@@ -20,9 +17,6 @@
       "company_by_name" : {
          "path" : "/v1/companies/universal-name=:name:selector",
          "method" : "GET",
-         "headers" : {
-            "Authorization" : "OAuth oauth_consumer_key=\":oauth_consumer_key\", oauth_nonce=\":oauth_nonce\", oauth_signature_method=\":oauth_signature_method\", oauth_timestamp=\":oauth_timestamp\", oauth_token=\":oauth_token\", oauth_version=\":oauth_version\", oauth_signature=\":oauth_signature\""
-         },
          "required_params" : [
             "name",
             "selector"
@@ -35,9 +29,6 @@
       "search_company" : {
          "path" : "/v1/company-search:selector",
          "method" : "GET",
-         "headers" : {
-            "Authorization" : "OAuth oauth_consumer_key=\":oauth_consumer_key\", oauth_nonce=\":oauth_nonce\", oauth_signature_method=\":oauth_signature_method\", oauth_timestamp=\":oauth_timestamp\", oauth_token=\":oauth_token\", oauth_version=\":oauth_version\", oauth_signature=\":oauth_signature\""
-         },
          "required_params" : [
             "selector"
          ],
@@ -56,9 +47,6 @@
       "my_followed_companies" : {
          "path" : "/v1/people/~/following/companies:selector",
          "method" : "GET",
-         "headers" : {
-            "Authorization" : "OAuth oauth_consumer_key=\":oauth_consumer_key\", oauth_nonce=\":oauth_nonce\", oauth_signature_method=\":oauth_signature_method\", oauth_timestamp=\":oauth_timestamp\", oauth_token=\":oauth_token\", oauth_version=\":oauth_version\", oauth_signature=\":oauth_signature\""
-         },
          "required_params" : [
             "selector"
          ],
@@ -70,18 +58,12 @@
       "follow_company" : {
          "path" : "/v1/people/~/following/companies",
          "method" : "POST",
-         "headers" : {
-            "Authorization" : "OAuth oauth_consumer_key=\":oauth_consumer_key\", oauth_nonce=\":oauth_nonce\", oauth_signature_method=\":oauth_signature_method\", oauth_timestamp=\":oauth_timestamp\", oauth_token=\":oauth_token\", oauth_version=\":oauth_version\", oauth_signature=\":oauth_signature\""
-         },
          "required_payload" : true,
          "expected_status" : [ 201 ]
       },
       "unfollow_company" : {
          "path" : "/v1/people/~/following/companies/id=:id",
          "method" : "DELETE",
-         "headers" : {
-            "Authorization" : "OAuth oauth_consumer_key=\":oauth_consumer_key\", oauth_nonce=\":oauth_nonce\", oauth_signature_method=\":oauth_signature_method\", oauth_timestamp=\":oauth_timestamp\", oauth_token=\":oauth_token\", oauth_version=\":oauth_version\", oauth_signature=\":oauth_signature\""
-         },
          "required_params" : [
             "id"
          ],
@@ -90,9 +72,6 @@
       "suggestion_companies" : {
          "path" : "/v1/people/~/suggestions/to-follow/companies:selector",
          "method" : "GET",
-         "headers" : {
-            "Authorization" : "OAuth oauth_consumer_key=\":oauth_consumer_key\", oauth_nonce=\":oauth_nonce\", oauth_signature_method=\":oauth_signature_method\", oauth_timestamp=\":oauth_timestamp\", oauth_token=\":oauth_token\", oauth_version=\":oauth_version\", oauth_signature=\":oauth_signature\""
-         },
          "required_params" : [
             "selector"
          ],
@@ -104,9 +83,6 @@
       "company_products" : {
          "path" : "/v1/companies/:id/products:selector",
          "method" : "GET",
-         "headers" : {
-            "Authorization" : "OAuth oauth_consumer_key=\":oauth_consumer_key\", oauth_nonce=\":oauth_nonce\", oauth_signature_method=\":oauth_signature_method\", oauth_timestamp=\":oauth_timestamp\", oauth_token=\":oauth_token\", oauth_version=\":oauth_version\", oauth_signature=\":oauth_signature\""
-         },
          "required_params" : [
             "id",
             "selector"

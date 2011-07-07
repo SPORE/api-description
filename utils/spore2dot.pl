@@ -101,7 +101,6 @@ foreach my $spec (@specs) {
         if ($ENV{SPORE_DETAILS}) {
             print "&nbsp;&nbsp;&nbsp;", $desc->{method}, " ", $desc->{path}, "\\l";
             for my $h (sort keys %{$desc->{headers}}) {
-                next if ($h =~ /^Auth/i);
                 print "&nbsp;&nbsp;&nbsp;", $h, ": ", $desc->{headers}->{$h}, "\\l";
             }
             for my $f (sort keys %{$desc->{'form-data'}}) {
