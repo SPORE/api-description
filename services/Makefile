@@ -17,11 +17,12 @@ check: spore_validation.rx
 	@$(VALIDATOR) ihackernews.json
 	@$(VALIDATOR) ohloh.json
 	@$(VALIDATOR) twitter.json
+	@$(VALIDATOR) intervals.json
 
 test: check
 
 spore_validation.rx:
-	wget http://github.com/SPORE/specifications/raw/master/spore_validation.rx
+	wget http://raw.github.com/SPORE/specifications/master/spore_validation.rx
 
 png: \
     amazons3.png \
@@ -35,6 +36,8 @@ png: \
     googletranslate.png \
     ihackernews.png \
     ohloh.png \
+    intervals.png \
+    indextank.png \
     twitter.png
 	@make -C github png
 	@make -C googlemaps png
