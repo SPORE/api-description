@@ -2,6 +2,10 @@
 
 ## DESCRIPTION
 
+## DISCUSSIONS
+
+ * [mailling list](http://groups.google.com/group/spore-rest)
+
 ## SPECIFICATIONS
 
 ### APPS
