@@ -18,6 +18,7 @@ check: spore_validation.rx
 	@$(VALIDATOR) ohloh.json
 	@$(VALIDATOR) twitter.json
 	@$(VALIDATOR) intervals.json
+	@$(VALIDATOR) velib.json
 
 test: check
 
@@ -38,6 +39,7 @@ png: \
     ohloh.png \
     intervals.png \
     indextank.png \
+    velib.png \
     twitter.png
 	@make -C github png
 	@make -C googlemaps png

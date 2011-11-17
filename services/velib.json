@@ -1,0 +1,22 @@
+{
+    "name": "Vélib'",
+    "authority": "GITHUB:dolmen",
+    "base_url": "http://www.velib.paris.fr/",
+    "version": "1.0",
+    "methods": {
+	"list": {
+	    "path": "/service/carto",
+	    "method": "GET",
+	    "expected_status": [200]
+	},
+	"details": {
+	    "path": "/service/stationdetails/:station",
+	    "method": "GET",
+	    "required_params": [
+		"station"
+	    ],
+	    "expected_status": [200]
+	}
+    },
+    "formats": [ "xml" ]
+}
