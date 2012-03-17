@@ -1,0 +1,29 @@
+{
+   "name" : "DataPublica",
+   "version" : "1",
+   "base_url" : "http://api.data-publica.com",
+   "methods" : {
+      "query" : {
+         "path" : "/v1/:reference/:tablename/content",
+         "method" : "GET",
+         "required_params" : [
+            "reference",
+            "tablename",
+            "key"
+         ],
+         "optional_params" : [
+            "format",
+            "limit",
+            "offset",
+            "filter"
+         ]
+      }
+   },
+   "authentication" : true,
+   "expected_status" : [ 200, 400, 404 ],
+   "formats" : [ "json", "csv", "excel" ],
+   "authority" : "http://github.com/SPORE",
+   "meta" : {
+      "documentation" : "http://www.data-publica.com/content/api/"
+   }
+}

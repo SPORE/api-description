@@ -8,6 +8,7 @@ check: spore_validation.rx
 	@$(VALIDATOR) amazons3.json
 	@$(VALIDATOR) backtweet.json
 	@$(VALIDATOR) backtype.json
+	@$(VALIDATOR) datapublica.json
 	@$(VALIDATOR) github.json
 	@$(VALIDATOR) googleoauth.json
 	@$(VALIDATOR) googleoauth2.json
@@ -28,6 +29,7 @@ png: \
     amazons3.png \
     backtweet.png \
     backtype.png \
+    datapublica.png \
     github.png \
     googleoauth.png \
     googleoauth2.png \
