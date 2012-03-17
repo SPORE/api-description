@@ -1,5 +1,5 @@
 VALIDATOR := perl ../utils/validator.pl --schema spore_validation.rx --description
-SPORE2DOT := perl ../utils/spore2dot.pl
+SPORE2DOT := perl -CO ../utils/spore2dot.pl
 
 check: spore_validation.rx
 	@make -C github check
@@ -19,6 +19,7 @@ check: spore_validation.rx
 	@$(VALIDATOR) ohloh.json
 	@$(VALIDATOR) twitter.json
 	@$(VALIDATOR) intervals.json
+	@$(VALIDATOR) velib.json
 
 test: check
 
@@ -40,13 +41,14 @@ png: \
     ohloh.png \
     intervals.png \
     indextank.png \
+    velib.png \
     twitter.png
 	@make -C github png
 	@make -C googlemaps png
 	@make -C linkedin png
 
 %.png : %.dot
-	dot -T png -o $@ $<
+	dot -T png -Gutf8 -o $@ $<
 
 %.dot: %.json
 	$(SPORE2DOT) $< > $@
