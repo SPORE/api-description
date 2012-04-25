@@ -32,6 +32,9 @@
             "id",
             "format"
          ],
+         "optional_params" : [
+            "include"
+         ],
          "method" : "GET",
          "authentication" : true
       },
