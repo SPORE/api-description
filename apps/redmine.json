@@ -201,6 +201,16 @@
          "authentication" : true
       },
       
+      "get_issue_time_entries" : {
+         "path" : "/issues/:id/time_entries.:format",
+         "required_params" : [
+            "id",
+            "format"
+         ],
+         "method" : "GET",
+         "authentication" : true
+      },
+
       "create_time_entries" : {
          "path" : "/time_entries.:format", 
          "required_params" : [
