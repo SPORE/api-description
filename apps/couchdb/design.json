@@ -93,6 +93,10 @@
             "db",
             "design",
             "view"
+         ],
+         "optional_params" : [
+            "keys",
+            "key"
          ]
       },
       "get_show_without_doc" : {
