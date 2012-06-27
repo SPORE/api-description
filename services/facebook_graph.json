@@ -1,0 +1,55 @@
+{
+"base_url": "http://graph.facebook.com/",
+"version":"0.1",
+"methods":{
+   "shares":{
+    "required_params":["url"],
+    "expected_status":["200"],
+    "path":"/:url",
+    "method":"GET"
+  },
+   "object":{
+    "required_params":["access_token","id"],
+    "expected_status":["200"],
+    "path":"/:id",
+    "method":"GET"
+  },
+   "posts":{
+    "required_params":["access_token","id"],
+    "expected_status":["200"],
+    "path":"/:id/posts",
+    "method":"GET"
+  },
+   "statuses":{
+    "required_params":["access_token","id"],
+    "expected_status":["200"],
+    "path":"/:id/statuses",
+    "method":"GET"
+  },
+   "feed":{
+    "required_params":["access_token","id"],
+    "expected_status":["200"],
+    "path":"/:id/feed",
+    "method":"GET"
+  },
+   "likes":{
+    "required_params":["access_token","id"],
+    "expected_status":["200"],
+    "path":"/:id/likes",
+    "method":"GET"
+  },
+   "comments":{
+    "required_params":["access_token","id"],
+    "expected_status":["200"],
+    "path":"/:id/comments",
+    "method":"GET"
+  },
+   "search":{
+    "required_params":["q"],
+    "optional_params":["access_token","type","field","until","since","limit","offset","__after_id"],
+    "expected_status":["200"],
+    "path":"/search",
+    "method":"GET"
+  }
+}
+}

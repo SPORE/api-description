@@ -1,0 +1,21 @@
+{
+"version":"0.1",
+"authentication":"1",
+"methods":{
+  "get_rules":{
+    "required_params":["account","publisher","format"],
+    "expected_status":["200"],
+    "authentication":"1",
+    "path":"/accounts/:account/publishers/:publisher/streams/track/prod/rules.:format",
+    "method":"GET"
+  },
+  "set_rules":{
+    "required_params":["account","publisher","format"],
+    "optional_params":["_method"],
+    "expected_status":["201","202"],
+    "authentication":"1",
+    "path":"/accounts/:account/publishers/:publisher/streams/track/prod/rules.:format",
+    "method":"POST"
+  }
+}
+}

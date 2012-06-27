@@ -1,0 +1,20 @@
+{
+    "base_url" : "http://search.twitter.com/",
+    "methods" : {
+        "search" : {
+            "path" : "/search.:format",
+            "method" : "GET",
+            "required_params" : [
+                "format",
+                "q"
+            ],
+            "optional_params" : [
+                "geocode",
+                "lang",
+                "locale",
+                "page",
+                "result_type"
+             ]
+        }
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "base_url" : "http://maps.googleapis.com/maps/api",
+    "methods" : {
+        "geocode" : {
+            "path" : "/geocode/:format",
+            "method" : "GET",
+            "required_params" : [
+                "format",
+                "address",
+                "sensor"
+            ]
+        }
+    }
+}

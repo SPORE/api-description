@@ -1,0 +1,20 @@
+{
+"base_url": "http://api.bitly.com",
+"version":"0.1",
+"methods":{
+  "lookup":{
+    "required_params":["login","apiKey","url"],
+    "optional_params":["format"],
+    "expected_status":["200"],
+    "path":"/v3/lookup",
+    "method":"GET"
+  },
+  "clicks":{
+    "required_params":["login","apiKey"],
+    "optional_params":["shortUrl","hash","format"],
+    "expected_status":["200"],
+    "path":"/v3/clicks",
+    "method":"GET"
+  }
+}
+}

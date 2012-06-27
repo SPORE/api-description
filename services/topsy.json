@@ -1,0 +1,21 @@
+{
+    "name" : "Topsy",
+    "version" : "0.1",
+    "base_url" : "http://otter.topsy.com/",
+    "methods" : {
+        "stats": {
+        "optional_params" : [],
+        "required_params" : ["url","format"],
+        "expected_status" : ["200"],
+        "path" : "/stats.:format",
+        "method" : "GET"
+        },
+        "credit": {
+        "optional_params" : [],
+        "required_params" : [],
+        "expected_status" : ["200"],
+        "path" : "/credit.:format",
+        "method" : "GET"
+        }        
+    }
+}
