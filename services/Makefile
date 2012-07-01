@@ -8,16 +8,24 @@ check: spore_validation.rx
 	@$(VALIDATOR) amazons3.json
 	@$(VALIDATOR) backtweet.json
 	@$(VALIDATOR) backtype.json
+	@$(VALIDATOR) bitly.json
 	@$(VALIDATOR) datapublica.json
+	@$(VALIDATOR) facebook_graph.json
 	@$(VALIDATOR) github.json
+	@$(VALIDATOR) gnip.json
+	@$(VALIDATOR) googlemaps.json
 	@$(VALIDATOR) googleoauth.json
 	@$(VALIDATOR) googleoauth2.json
 	@$(VALIDATOR) googlepagespeed.json
 	@$(VALIDATOR) googleshortener.json
 	@$(VALIDATOR) googletranslate.json
 	@$(VALIDATOR) ihackernews.json
+	@$(VALIDATOR) intervals.json
+	@$(VALIDATOR) klout.json
 	@$(VALIDATOR) ohloh.json
+	@$(VALIDATOR) topsy.json
 	@$(VALIDATOR) twitter.json
+	@$(VALIDATOR) twitter_search.json
 	@$(VALIDATOR) intervals.json
 
 test: check
@@ -29,18 +37,25 @@ png: \
     amazons3.png \
     backtweet.png \
     backtype.png \
+    bitly.png \
     datapublica.png \
+    facebook_graph.png \
     github.png \
+    gnip.png \
+    googlemaps.png \
     googleoauth.png \
     googleoauth2.png \
     googlepagespeed.png \
     googleshortener.png \
     googletranslate.png \
     ihackernews.png \
-    ohloh.png \
-    intervals.png \
     indextank.png \
-    twitter.png
+    intervals.png \
+    klout.png \
+    ohloh.png \
+    topsy.png \
+    twitter.png \
+    twitter_search.png
 	@make -C github png
 	@make -C googlemaps png
 	@make -C linkedin png

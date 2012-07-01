@@ -1,4 +1,5 @@
 {
+"name":"KLOUT",
 "base_url":"http://api.klout.com",
 "version":"0.1",
 "methods":{

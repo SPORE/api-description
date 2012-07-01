@@ -1,4 +1,5 @@
 {
+"name": "facebook graph",
 "base_url": "http://graph.facebook.com/",
 "version":"0.1",
 "methods":{

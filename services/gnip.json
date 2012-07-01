@@ -1,11 +1,12 @@
 {
+"name":"gnip",
 "version":"0.1",
-"authentication":"1",
+"authentication":true,
 "methods":{
   "get_rules":{
     "required_params":["account","publisher","format"],
     "expected_status":["200"],
-    "authentication":"1",
+    "authentication":true,
     "path":"/accounts/:account/publishers/:publisher/streams/track/prod/rules.:format",
     "method":"GET"
   },
@@ -13,7 +14,7 @@
     "required_params":["account","publisher","format"],
     "optional_params":["_method"],
     "expected_status":["201","202"],
-    "authentication":"1",
+    "authentication":true,
     "path":"/accounts/:account/publishers/:publisher/streams/track/prod/rules.:format",
     "method":"POST"
   }

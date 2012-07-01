@@ -1,4 +1,5 @@
 {
+    "name" : "twitter search",
     "base_url" : "http://search.twitter.com/",
     "methods" : {
         "search" : {

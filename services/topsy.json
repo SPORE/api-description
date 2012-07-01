@@ -16,6 +16,6 @@
         "expected_status" : ["200"],
         "path" : "/credit.:format",
         "method" : "GET"
-        }        
+        }
     }
 }

@@ -1,4 +1,5 @@
 {
+    "name": "Google Maps",
     "base_url" : "http://maps.googleapis.com/maps/api",
     "methods" : {
         "geocode" : {

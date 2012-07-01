@@ -1,4 +1,5 @@
 {
+"name": "bitly",
 "base_url": "http://api.bitly.com",
 "version":"0.1",
 "methods":{
