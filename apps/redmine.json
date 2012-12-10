@@ -5,7 +5,7 @@
       "json", 
       "xml"
    ],   
-   "version" : "0.2",
+   "version" : "0.3",
  
    "methods" :{
       "list_issues" : {
@@ -354,6 +354,16 @@
       "list_issue_statuses" : {
          "path" : "/issue_statuses.:format",
          "required_params" : [
+            "format"
+         ],
+         "method" : "GET",
+         "authentication" : true
+      },
+
+      "list_issue_categories" : {
+         "path" : "/projects/:project_id/issue_categories.:format",
+         "required_params" : [
+            "project_id",
             "format"
          ],
          "method" : "GET",
