@@ -2,14 +2,14 @@
    "name" : "Redmine API",
    "authority" : "GITHUB:Keen-github",
    "formats" : [
-      "json", 
+      "json",
       "xml"
-   ],   
+   ],
    "version" : "0.1",
- 
+
    "methods" :{
       "list_issues" : {
-         "path" : "/issues.:format", 
+         "path" : "/issues.:format",
          "required_params" : [
             "format"
          ],
@@ -20,24 +20,27 @@
             "project_id",
             "tracker_id",
             "status_id",
-            "cf_XXX"            
+            "cf_XXX"
          ],
          "method" : "GET",
          "authentication" : true
       },
-      
+
       "get_issue" : {
-         "path" : "/issues/:id.:format", 
+         "path" : "/issues/:id.:format",
          "required_params" : [
             "id",
             "format"
          ],
+         "optional_params" : [
+            "include"
+         ],
          "method" : "GET",
          "authentication" : true
       },
-        
+
       "create_issue" : {
-         "path" : "/issues.:format", 
+         "path" : "/issues.:format",
          "required_params" : [
             "format"
          ],
@@ -47,7 +50,7 @@
       },
 
       "update_issue" : {
-         "path" : "/issues/:id.:format", 
+         "path" : "/issues/:id.:format",
          "required_params" : [
             "id",
             "format"
@@ -58,7 +61,7 @@
       },
 
       "delete_issue" : {
-         "path" : "/issues/:id.:format", 
+         "path" : "/issues/:id.:format",
          "required_params" : [
             "id",
             "format"
@@ -66,9 +69,9 @@
          "method" : "DELETE",
          "authentication" : true
       },
-      
+
       "list_projects" : {
-         "path" : "/projects.:format", 
+         "path" : "/projects.:format",
          "required_params" : [
             "format"
          ],
@@ -77,28 +80,28 @@
       },
 
       "get_project" : {
-         "path" : "/projects/:id.:format", 
+         "path" : "/projects/:id.:format",
          "required_params" : [
             "id",
-            "format"            
+            "format"
          ],
          "method" : "GET",
          "authentication" : true
       },
-      
+
       "create_project" : {
-         "path" : "/projects.:format", 
+         "path" : "/projects.:format",
          "required_params" : [
             "format"
          ],
          "method" : "POST",
-         "authentication" : true,    
+         "authentication" : true,
          "required_payload": true,
          "expected_status": [201, 422]
       },
 
       "update_project" : {
-         "path" : "/projects/:id.:format", 
+         "path" : "/projects/:id.:format",
          "required_params" : [
             "id",
             "format"
@@ -109,7 +112,7 @@
       },
 
       "delete_project" : {
-         "path" : "/projects/:id.:format", 
+         "path" : "/projects/:id.:format",
          "required_params" : [
             "id",
             "format"
@@ -119,7 +122,7 @@
       },
 
       "list_users" : {
-         "path" : "/users.:format", 
+         "path" : "/users.:format",
          "required_params" : [
             "format"
          ],
@@ -128,7 +131,7 @@
       },
 
       "get_user" : {
-         "path" : "/users/:id.:format", 
+         "path" : "/users/:id.:format",
          "required_params" : [
             "id",
             "format"
@@ -136,9 +139,9 @@
          "method" : "GET",
          "authentication" : true
       },
-      
+
       "get_current_user" : {
-         "path" : "/users/current.:format", 
+         "path" : "/users/current.:format",
          "required_params" : [
             "format"
          ],
@@ -150,7 +153,7 @@
       },
 
       "create_user" : {
-         "path" : "/users.:format", 
+         "path" : "/users.:format",
          "required_params" : [
             "format"
          ],
@@ -161,7 +164,7 @@
       },
 
       "update_user" : {
-         "path" : "/users/:id.:format", 
+         "path" : "/users/:id.:format",
          "required_params" : [
             "id",
             "format"
@@ -172,7 +175,7 @@
       },
 
       "delete_user" : {
-         "path" : "/users/:id.:format", 
+         "path" : "/users/:id.:format",
          "required_params" : [
             "id",
             "format"
@@ -183,7 +186,7 @@
       },
 
       "list_time_entries" : {
-         "path" : "/time_entries.:format", 
+         "path" : "/time_entries.:format",
          "required_params" : [
             "format"
          ],
@@ -192,7 +195,7 @@
       },
 
       "get_time_entry" : {
-         "path" : "/time_entries/:id.:format", 
+         "path" : "/time_entries/:id.:format",
          "required_params" : [
             "id",
             "format"
@@ -200,9 +203,19 @@
          "method" : "GET",
          "authentication" : true
       },
-      
+
+      "get_issue_time_entries" : {
+         "path" : "/issues/:id/time_entries.:format",
+         "required_params" : [
+            "id",
+            "format"
+         ],
+         "method" : "GET",
+         "authentication" : true
+      },
+
       "create_time_entries" : {
-         "path" : "/time_entries.:format", 
+         "path" : "/time_entries.:format",
          "required_params" : [
             "format"
          ],
@@ -213,7 +226,7 @@
       },
 
       "update_time_entries" : {
-         "path" : "/time_entries/:id.:format", 
+         "path" : "/time_entries/:id.:format",
          "required_params" : [
             "id",
             "format"
@@ -225,7 +238,7 @@
       },
 
       "delete_time_entry" : {
-         "path" : "/time_entries/:id.:format", 
+         "path" : "/time_entries/:id.:format",
          "required_params" : [
             "id",
             "format"
@@ -233,9 +246,9 @@
          "method" : "DELETE",
          "authentication" : true
       },
-      
+
       "list_issue_relations" : {
-         "path" : "/issues/:issue_id/relations.:format", 
+         "path" : "/issues/:issue_id/relations.:format",
          "required_params" : [
             "issue_id",
             "format"
@@ -243,9 +256,9 @@
          "method" : "GET",
          "authentication" : true
       },
-      
+
       "get_issue_relation" : {
-         "path" : "/relations/:id.:format", 
+         "path" : "/relations/:id.:format",
          "required_params" : [
             "id",
             "format"
@@ -253,9 +266,9 @@
          "method" : "GET",
          "authentication" : true
       },
-        
+
       "create_issue_relation" : {
-         "path" : "/issues/:issue_id/relations.:format", 
+         "path" : "/issues/:issue_id/relations.:format",
          "required_params" : [
             "issue_id",
             "format"
@@ -267,7 +280,7 @@
       },
 
       "delete_issue_relation" : {
-         "path" : "/relations/:id.:format", 
+         "path" : "/relations/:id.:format",
          "required_params" : [
             "id",
             "format"
@@ -276,9 +289,9 @@
          "authentication" : true,
          "expected_status": [200, 422]
       },
-      
+
       "list_versions" : {
-         "path" : "/projects/:project_id/versions.:format", 
+         "path" : "/projects/:project_id/versions.:format",
          "required_params" : [
             "project_id",
             "format"
@@ -288,29 +301,29 @@
       },
 
       "get_version" : {
-         "path" : "/versions/:id.:format", 
+         "path" : "/versions/:id.:format",
          "required_params" : [
             "id",
-            "format"            
+            "format"
          ],
          "method" : "GET",
          "authentication" : true
       },
-      
+
       "create_version" : {
-         "path" : "/projects/:project_id/versions.:format", 
+         "path" : "/projects/:project_id/versions.:format",
          "required_params" : [
             "project_id",
             "format"
          ],
          "method" : "POST",
-         "authentication" : true,    
+         "authentication" : true,
          "required_payload": true,
          "expected_status": [201, 422]
       },
 
       "update_version" : {
-         "path" : "/versions/:id.:format", 
+         "path" : "/versions/:id.:format",
          "required_params" : [
             "id",
             "format"
@@ -322,7 +335,7 @@
       },
 
       "delete_version" : {
-         "path" : "/versions/:id.:format", 
+         "path" : "/versions/:id.:format",
          "required_params" : [
             "id",
             "format"
@@ -332,7 +345,7 @@
       },
 
       "list_queries" : {
-         "path" : "/queries.:format", 
+         "path" : "/queries.:format",
          "required_params" : [
             "format"
          ],
@@ -342,19 +355,19 @@
       },
 
       "get_attachment" : {
-         "path" : "/attachments/:id.:format", 
+         "path" : "/attachments/:id.:format",
          "required_params" : [
             "id",
             "format"
          ],
          "method" : "GET",
          "authentication" : true
-     }               
+     }
    },
-   
+
     "meta" : {
       "documentation" : "http://www.redmine.org/projects/redmine/wiki/Rest_api",
       "authors" : "LogicEditor.com: Valeriy Skurikhin"
     }
-   
+
 }
