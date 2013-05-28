@@ -1,0 +1,75 @@
+{
+   "name" : "Pushover",
+   "authority" : "GITHUB:hakamadare",
+   "version" : "1.0",
+   "base_url" : "http://api.pushover.net/1",
+   "formats" : [
+      "json",
+      "xml"
+   ],
+   "methods" : {
+      "messages" : {
+         "expected_status" : [
+            "200",
+            "400",
+            "404"
+         ],
+         "optional_params" : [
+            "device",
+            "title",
+            "timestamp",
+            "priority",
+            "retry",
+            "expire",
+            "callback",
+            "url",
+            "url_title",
+            "sound"
+         ],
+         "method" : "POST",
+         "path" : "/messages.:format",
+         "required_params" : [
+            "token",
+            "user",
+            "message"
+         ]
+      },
+      "users" : {
+         "base_url": "https://api.pushover.net/1",
+         "formats" : [
+             "json"
+         ],
+         "expected_status" : [
+            "200",
+            "400",
+            "404"
+         ],
+         "optional_params" : [
+            "device"
+         ],
+         "method" : "POST",
+         "path" : "/users/validate.:format",
+         "required_params" : [
+            "token",
+            "user"
+         ]
+      },
+      "receipts" : {
+         "base_url": "https://api.pushover.net/1",
+         "formats" : [
+             "json"
+         ],
+         "expected_status" : [
+            "200",
+            "400",
+            "404"
+         ],
+         "method" : "GET",
+         "path" : "/receipts/:receipt.:format",
+         "required_params" : [
+            "receipt",
+            "token"
+         ]
+      }
+   }
+}
